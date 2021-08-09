@@ -786,7 +786,8 @@ margin-right: 10em;
 }
 
 .our-work .grid li{
-	padding: 20px;
+	/* padding: 20px; */
+	margin: 1em;
 	height: 350px;
 	border-radius: 3px;
 
@@ -797,19 +798,19 @@ margin-right: 10em;
 }
 
 .our-work .grid li.small{
-	flex-basis: 40%;
+	flex-basis: 35%;
 }
 
 .our-work .grid li.large{
-	flex-basis: 60%;
+	flex-basis: 55%;
 }
 
 .our-work .grid li.x-small{
-	flex-basis: 20%;
+	flex-basis: 15%;
 }
 
 .our-work .grid li.x-large{
-	flex-basis: 80%;
+	flex-basis: 75%;
 }
 
 .our-work .grid li.half{
@@ -887,27 +888,50 @@ margin-right: 10em;
 	outline-width: 15px;
 }
 
+/* .our-work .grid .bottom-left {
+	height: 40em;
+	/* padding-right: 8em; */
+	/* padding-left: 5em; 
+} */
+
 .our-work .grid .bottom-left {
 	height: 40em;
+	outline: solid 0px rgb(142, 238, 185);
+	transition: outline 0.5s linear;
 	/* padding-right: 8em; */
 	/* padding-left: 5em; */
 }
 
-.our-work .grid .bottom-left:hover {
+/* .our-work .grid .bottom-left:hover {
 	padding: 5px;
 	border-top: 15px solid rgb(142, 238, 185);
 	border-left: 15px solid rgb(142, 238, 185);
+} */
+
+.our-work .grid .bottom-left:hover {
+	outline-width: 15px;
 }
+
+/* .our-work .grid .bottom-right {
+	margin-top: 7em;
+} */
 
 .our-work .grid .bottom-right {
 	margin-top: 7em;
+	outline: solid 0px burlywood;
+	transition: outline 0.5s linear;
 }
 
-.our-work .grid .bottom-right:hover {
+/* .our-work .grid .bottom-right:hover {
 	padding: 5px;
 	border-top: 15px solid burlywood;
 	border-right: 15px solid burlywood;
+} */
+
+.our-work .grid .bottom-right:hover {
+outline-width: 15px;
 }
+
 
 .our-work .grid li {
 	font-weight: bolder;
@@ -921,7 +945,9 @@ margin-right: 10em;
 	font-size: 1.5em;
 	margin-top: 1.5em;
 	margin-left: 1.5em;
-	visibility: hidden;
+	/* visibility: hidden; */
+	opacity: 0;
+	transition: opacity 1s;
 }
 
 .our-work .grid .project-2-text {
@@ -929,7 +955,9 @@ margin-right: 10em;
 	margin-top: 1.5em;
 	margin-right: 1.5em;
 	text-align: right;
-	visibility: hidden;
+	/* visibility: hidden; */
+	opacity: 0;
+	transition: opacity 1s;
 }
 
 .our-work .grid .project-3-text {
@@ -937,19 +965,25 @@ margin-right: 10em;
 	margin-top: 9em;
 	margin-right: 1.5em;
 	text-align: right;
-	visibility: hidden;
+	/* visibility: hidden; */
+	opacity: 0;
+	transition: opacity 1s;
 }
 
 .our-work .grid li:hover .project-1-text {
-	visibility: visible;
+	/* visibility: visible; */
+	opacity: 1;
 }
 
 .our-work .grid li:hover .project-2-text {
-	visibility: visible;
+	/* visibility: visible; */
+	opacity: 1;
 }
 
 .our-work .grid li:hover .project-3-text {
-	visibility: visible;
+	/* visibility: visible;*/
+	opacity: 1;
+
 }
 
 
