@@ -12,6 +12,7 @@ html{
 	font: normal 16px sans-serif;
 	color: white;
 	background-color: black;
+	overflow-x: hidden;
 }
 
 ul, nav{
@@ -517,8 +518,6 @@ header nav a:hover {
 	.icon.active .bar:nth-child(3){
 		transform: translateY(-8px) rotate(45deg);
 	}
-
-
 }
 
 .image-container {
@@ -649,6 +648,10 @@ header nav a:hover {
 @media (max-width: 800px){
 	.third-image {
 		padding-left: 2em;
+		margin: 0px;
+		padding-top: 2em;
+		padding-bottom: 2em;
+		margin-top: 3em;
 	}
 }
 
@@ -664,8 +667,7 @@ header nav a:hover {
 
 @media (max-width: 800px){
 	.first-image,
-	.second-image,
-	.third-image{
+	.second-image {
 		margin: 0px;
 		padding-top: 2em;
 		padding-bottom: 2em;
@@ -811,27 +813,106 @@ margin-right: 10em;
 }
 
 .our-work .grid li.half{
-	flex-basis: 50%;
+	/* flex-basis: 50%; */
 }
 
 .our-work .grid .top-right {
 	height: 35em;
-	padding-right: 5em;
+	/* padding-right: 5em; */
+}
+
+.our-work .grid .top-right:hover {
+	padding: 5px;
+	border-top: 15px solid hotpink;
+	border-right: 15px solid hotpink;
 }
 
 .our-work .grid .middle {
-	padding-left: 5em;
-	padding-right: 10em;
+	margin-left: 10em;
+	/* padding-left: 5em; */
+	/* padding-right: 10em; */
+}
+
+.our-work .grid .middle:hover {
+	padding: 5px;
+	border-bottom: 15px solid brown;
+	border-right: 15px solid brown;
 }
 
 .our-work .grid .top-left {
 	margin-top: 13em;
+	/* padding-left: 3em; */
+}
+
+.our-work .grid .top-left:hover {
+	padding: 5px;
+	border-top: 15px solid lightblue;
+	border-left: 15px solid lightblue;
 }
 
 .our-work .grid .bottom-left {
 	height: 40em;
-	padding-right: 8em;
-	padding-left: 5em;
+	/* padding-right: 8em; */
+	/* padding-left: 5em; */
+}
+
+.our-work .grid .bottom-left:hover {
+	padding: 5px;
+	border-top: 15px solid rgb(142, 238, 185);
+	border-left: 15px solid rgb(142, 238, 185);
+}
+
+.our-work .grid .bottom-right {
+	margin-top: 7em;
+}
+
+.our-work .grid .bottom-right:hover {
+	padding: 5px;
+	border-top: 15px solid burlywood;
+	border-right: 15px solid burlywood;
+}
+
+.our-work .grid li {
+	font-weight: bolder;
+}
+
+.our-work .grid .project h2 {
+	font-weight: bolder;
+}
+
+.our-work .grid .project-1-text {
+	font-size: 1.5em;
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+	visibility: hidden;
+}
+
+.our-work .grid .project-2-text {
+	font-size: 1.5em;
+	margin-top: 1.5em;
+	margin-right: 1.5em;
+	text-align: right;
+	visibility: hidden;
+}
+
+.our-work .grid .project-3-text {
+	font-size: 1.5em;
+	margin-top: 9em;
+	margin-right: 1.5em;
+	text-align: right;
+	visibility: hidden;
+}
+
+.our-work .grid li:hover .project-1-text {
+	visibility: visible;
+}
+
+.our-work .grid li:hover .project-2-text {
+	visibility: visible;
+}
+
+.our-work .grid li:hover .project-3-text {
+	visibility: visible;
 }
 
 
@@ -841,15 +922,57 @@ margin-right: 10em;
 	.our-work .grid li.large{
 		flex-basis: 100%;
 	}
+	.our-work {
+		padding-top: 0px;
+	}
 	.projects-title-text {
 		width: 85%;
 	}
-
+	.our-work .grid .top-left {
+		margin-top: 0px;;
+	}
+	.our-work .grid .top-right {
+		height: 350px;;
+	}
+	.our-work .grid .bottom-left {
+		height: 350px;;
+	}
+	.our-work .grid .bottom-right {
+		margin: 0px;
+	}
+	.our-work .grid .top-right {
+		height: 350px;;
+	}
+	.our-work .grid .middle {
+		margin-left: 0px;
+		flex-basis: 100%;
+	}
+	.our-work .grid .project {
+		visibility: visible;
+	}
+	
 }
 
-
-
-
+@media (max-width: 700px){
+	.projects-title h2 {
+		font-size: 40px;
+	}
+	.projects-section {
+		margin-left: 0px;
+	}
+	.projects-title-text {
+		margin-top: 0px;
+		margin-left: 0px;
+		padding-left: 0px;
+		width: 100%;
+		margin-bottom: 0px;
+	}
+	.projects-title-text p {
+		margin-bottom: 0px;
+		padding: 0px;
+		padding-top: 2em;
+	}
+}
 
 
 /*-------------
@@ -951,9 +1074,35 @@ footer a:hover {
 	background-size: 40px 40px;
   }
 
+  .dot-pattern-projects-first {
+	height: 400px;
+	width: 500px;
+	position: absolute;
+	right: 70%;
+	margin-top: 30%;
+	z-index: -20;
+	
+
+	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
+	background-size: 40px 40px;
+  }
+
+  .dot-pattern-projects-second {
+	height: 650px;
+	width: 500px;
+	position: absolute;
+	left: 70%;
+	margin-top: 65%;
+	z-index: -20;
+	
+
+	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
+	background-size: 40px 40px;
+  }
+
   @media (max-width: 800px){
 
-	.dot-pattern-first, .dot-pattern-second {
+	.dot-pattern-first, .dot-pattern-second, .dot-pattern-projects-first, .dot-pattern-projects-second {
 		display: none;
 	}
 
