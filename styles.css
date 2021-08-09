@@ -816,38 +816,75 @@ margin-right: 10em;
 	/* flex-basis: 50%; */
 }
 
+/* first versions have been commented out--those styles look closer to the design, but also have annoying effects on positioning. Currently experimenting with alternatives */
+
+/* .our-work .grid .top-right {
+	height: 35em;
+	/* padding-right: 5em;
+} */
+
 .our-work .grid .top-right {
 	height: 35em;
+	outline: solid 0px hotpink;
+	transition: outline 0.5s linear;
 	/* padding-right: 5em; */
 }
 
-.our-work .grid .top-right:hover {
+
+/* .our-work .grid .top-right:hover {
 	padding: 5px;
 	border-top: 15px solid hotpink;
 	border-right: 15px solid hotpink;
+} */
+
+.our-work .grid .top-right:hover {
+	outline-width: 15px;
 }
+
+/* .our-work .grid .middle {
+	margin-left: 10em;
+	/* padding-left: 5em; */
+	/* padding-right: 10em;
+} */
 
 .our-work .grid .middle {
 	margin-left: 10em;
+	outline: solid 0px brown;
+	transition: outline 0.5s linear;
 	/* padding-left: 5em; */
 	/* padding-right: 10em; */
 }
 
-.our-work .grid .middle:hover {
+/* .our-work .grid .middle:hover {
 	padding: 5px;
 	border-bottom: 15px solid brown;
 	border-right: 15px solid brown;
+} */
+
+.our-work .grid .middle:hover {
+	outline-width: 15px;
 }
+
+/* .our-work .grid .top-left {
+	margin-top: 13em;
+	/* padding-left: 3em;
+} */
 
 .our-work .grid .top-left {
 	margin-top: 13em;
+	outline: solid 0px lightblue;
+	transition: outline 0.5s linear;
 	/* padding-left: 3em; */
 }
 
-.our-work .grid .top-left:hover {
+/* .our-work .grid .top-left:hover {
 	padding: 5px;
 	border-top: 15px solid lightblue;
 	border-left: 15px solid lightblue;
+} */
+
+.our-work .grid .top-left:hover {
+	outline-width: 15px;
 }
 
 .our-work .grid .bottom-left {
