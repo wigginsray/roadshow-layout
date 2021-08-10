@@ -765,7 +765,6 @@ margin-right: 10em;
 	margin-left: 5em;
 	overflow: hidden;
 	align-items: flex-start;
-	
 }
 
 .projects-section h2 {
@@ -1206,6 +1205,7 @@ Single Project section
 	.single-project-title-section {
 		padding-right: 1em;
 		padding-left: 1em;
+		padding-bottom: 1.5em;
 	}
 	.single-project-title-section h2 {
 		font-size: 40px;
@@ -1386,6 +1386,30 @@ Team section
 		padding: 0.7em;
 	}
   }
+
+/*-------------
+ 	Documents
+-------------*/
+
+.documents-title-text {
+	margin-left: 23em;
+	margin-top: -6em;
+}
+
+.documents-section {
+	padding-top: 11rem;
+	padding-bottom: 3rem;
+	padding-left: 5em;
+	padding-right: 5em;
+	overflow: hidden;
+	align-items: flex-start;
+}
+
+.documents-section h2 {
+	font-size: 100px;
+	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+	text-transform: uppercase;
+}
 
 /*-------------
  	Footer
