@@ -99,6 +99,10 @@ ul.grid{
 	justify-content: center;
 }
 
+h2 {
+	font-family: 'Gotham' !important;
+	font-weight: 800;
+}
 
 /*-------------
  	Header
@@ -766,7 +770,7 @@ margin-right: 10em;
 
 .projects-section h2 {
 	font-size: 100px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 	text-transform: uppercase;
 }
 
@@ -776,8 +780,8 @@ margin-right: 10em;
 }
 
 .projects-title-text {
-	padding-left: 10em;
-	margin-top: -6em;
+	padding-left: 11em;
+	margin-top: -6.5em;
 	width: 60%;
 }
 
@@ -1045,6 +1049,343 @@ outline-width: 15px;
 	}
 }
 
+/*------------- 
+Single Project section 
+-------------*/
+
+.single-project-title-section {
+	padding-top: 11rem;
+	padding-bottom: 3rem;
+	margin-left: 5em;
+	overflow: hidden;
+	/* align-items: flex-start; */
+	flex-direction: row;
+	/* width: 85%; */
+	padding-right: 2em;
+}
+
+.single-project-title-section h2 {
+	font-size: 80px;
+	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+	text-transform: uppercase;
+}
+
+.project-hero-image {
+	width: 70%;
+	height: 30em;
+}
+
+.single-project-title {
+	background-color: #4FC8ED;
+	padding: 2em;
+	line-height: 1;
+	margin-left: -15%;
+}
+
+.single-project-description {
+	align-items: flex-start;
+	margin-left: 5rem;
+	width: 50%;
+}
+
+.single-project-description p {
+	padding: 0px;
+}
+
+.project-additional-info-container {
+	display: flex;
+}
+
+.project-additional-info-container h4 {
+	text-transform: uppercase;
+	padding-bottom: 1em;
+}
+
+.project-additional-info-container p {
+	margin-bottom: 0px;
+}
+
+.project-additional-info-1 {
+	margin-right: 2em;
+}
+
+.project-additional-info-2 {
+	margin-left: 2em;
+}
+
+.single-project-grid-container {
+	margin-top: 2em;
+}
+
+.our-work .grid .single-project-image-1 {
+	height: 20em;
+}
+
+.our-work .grid .single-project-image-2 {
+	height: 40em;
+}
+
+.single-project-middle-blurb {
+	padding: 50px 50px;
+	padding-bottom: 0px;
+	align-items: flex-end;
+	padding-left: 40em;
+}
+
+.project-testimonials {
+	padding: 50px 50px;
+	align-items: flex-end;
+	padding-right: 40em;
+}
+
+.project-testimonials p {
+	font-style: italic;
+}
+
+.blurb-container {
+	display: flex;
+}
+
+.fa-quote-left {
+	/* margin-top: -1em; */
+}
+
+.fa-quote-right {
+	/* margin-top: 20%;
+	margin-right: 1em; */
+}
+
+@media (max-width: 1000px){
+	.single-project-title-section {
+		/* flex-direction: row-reverse; */
+		padding-right: 50px;
+		padding-top: 100px;
+		margin-left: 0px;
+	}
+	.project-hero-image {
+		width: 100%;
+	}
+	.single-project-title {
+		margin-left: -24em;
+		margin-top: 25em;
+	}
+	.single-project-description {
+		margin-left: 0px;
+		width: 100%;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.single-project-grid-container {
+		padding-bottom: 1em;
+	}
+	.single-project-middle-blurb {
+		padding-left: 3em;
+		padding-right: 3em;;
+	}
+	.blurb-container {
+		justify-content: center;
+	}
+	.blurb-container p {
+		max-width: 100%;
+		/* padding-right: 50px;
+		padding-left: 50px; */
+		padding-bottom: 1em;
+		margin-bottom: 0px;
+	}
+	.project-testimonials {
+		padding-right: 3em;
+		padding-left: 3em;
+		padding-top: 0;
+	}
+	.our-work .grid .single-project-image-2 {
+		height: 20em;
+	}
+}
+
+@media (max-width: 600px){
+	.single-project-title-section {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+	.single-project-title-section h2 {
+		font-size: 40px;
+	}
+	.single-project-title-section img {
+		height: 20em;
+	}
+	.single-project-title {
+		margin-left: -15em;
+		margin-top: 20em;
+	}
+	.single-project-description {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+	.dot-pattern-single-project-first {
+		visibility: hidden;
+	}
+	.single-project-grid-container {
+		padding: 0em;
+		margin-top: 0em;
+	}
+	.single-project-middle-blurb {
+		padding: 0em;
+		padding-top: 1em;
+	} 
+	.project-testimonials {
+		padding-top: 3em;
+	}
+}
+
+/*------------- 
+Team section 
+-------------*/
+
+.team-section {
+	padding-top: 11rem;
+	padding-bottom: 3rem;
+	margin-left: 5em;
+	overflow: hidden;
+	align-items: flex-start;
+}
+
+.team-section h2 {
+	font-size: 90px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.team-title {
+	line-height: 1;
+}
+
+.team-title-text {
+	margin-left: 31em;
+	margin-top: -5em;
+	/* width: 50%; */
+	padding-right: 3em;
+}
+
+.team-container {
+	margin-bottom: 5em;
+}
+
+.filter-list {
+	width: 100%;
+}
+
+.filter-list .links{
+	display: flex;
+	justify-content: space-around;
+}
+
+.filter-list .links a {
+	transition: color 0.1s ease-out;
+}
+
+.filter-list .links a:hover {
+	color: #4FC8ED;
+	/* text-decoration: underline; */
+	border-bottom: 4px solid #4FC8ED;
+	padding-bottom: 0.7em;
+	transition: transform 2000;
+}
+
+.avatars-container {
+	margin-top: 5em;
+	width: 80%;
+}
+
+.avatars {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+	grid-gap: 100px;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.card {
+    position: relative;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+    /* overflow: hidden; */
+    background: black;
+}
+
+.card img {
+	display: block;
+	max-width: 100%;
+	object-fit: cover;
+	width: 100%;
+	/* height: 50px; */
+	border-radius: 50%;
+  }
+
+.card .additional-info {
+	margin-top: 1.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card h5 {
+	padding: 1em;
+}
+
+.card .bio-button {
+	visibility: hidden;
+}
+
+.filter-list-mobile {
+	visibility: hidden;
+}
+
+  @media (max-width: 1000px){
+	.team-title-text {
+		margin: 0px;
+	}
+	.team-title-text p {
+		padding: 0px;
+		margin-top: 2em;
+	} 
+	.team-section {
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 0px;
+	}
+	.team-container {
+		padding-top: 0px;
+	}
+	.filter-list {
+		visibility: hidden;
+	}
+	.filter-list-mobile {
+		visibility: visible;
+		width: 80%;
+	}
+	.filter-list-mobile .departments {
+		width: 100%;
+		background-color: black;
+		color: white;
+		padding: 1em;
+	}
+	.departments option {
+		padding: 1em;
+		margin: 1em;
+	}
+  }
+
+  @media (max-width: 600px){
+	.team-title h2 {
+		font-size: 40px;
+	}
+	.card .bio-button {
+		visibility: visible;
+		border: 1px solid #4FC8ED;
+		width: fit-content;
+		padding: 0.7em;
+	}
+  }
 
 /*-------------
  	Footer
@@ -1131,9 +1472,9 @@ footer a:hover {
 
 	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
 	background-size: 40px 40px;
-  }
+}
 
-  .dot-pattern-second {
+.dot-pattern-second {
 	height: 500px;
 	width: 500px;
 	position: absolute;
@@ -1143,9 +1484,9 @@ footer a:hover {
 
 	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
 	background-size: 40px 40px;
-  }
+}
 
-  .dot-pattern-projects-first {
+.dot-pattern-projects-first {
 	height: 400px;
 	width: 500px;
 	position: absolute;
@@ -1156,9 +1497,9 @@ footer a:hover {
 
 	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
 	background-size: 40px 40px;
-  }
+}
 
-  .dot-pattern-projects-second {
+.dot-pattern-projects-second {
 	height: 650px;
 	width: 500px;
 	position: absolute;
@@ -1171,9 +1512,37 @@ footer a:hover {
 	background-size: 40px 40px;
   }
 
-  @media (max-width: 800px){
+.dot-pattern-single-project-first {
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	right: 70%;
+	margin-top: 20%;
+	z-index: -20;
+	
 
-	.dot-pattern-first, .dot-pattern-second, .dot-pattern-projects-first, .dot-pattern-projects-second {
+	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
+	background-size: 40px 40px;
+}
+
+.dot-pattern-single-project-second{
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	left: 70%;
+	margin-top: -10%;
+	/* margin-top: 20%; */
+	z-index: -20;
+	
+
+	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
+	background-size: 40px 40px;
+}
+  
+
+@media (max-width: 800px){
+
+	.dot-pattern-first, .dot-pattern-second, .dot-pattern-projects-first, .dot-pattern-projects-second, .dot-pattern-single-project-first, .dot-pattern-single-project-second {
 		display: none;
 	}
 
