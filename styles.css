@@ -1302,6 +1302,8 @@ Team section
 	transition: transform 2000;
 }
 
+
+
 .avatars-container {
 	margin-top: 5em;
 	width: 80%;
@@ -1363,19 +1365,30 @@ Team section
 	visibility: hidden;
 }
 
+.overlay-2 {
+
+}
+
+.card-image:hover .opaque-image {
+	visibility: hidden;
+}
+
+.card-image:hover .transparent-image {
+	visibility: visible;
+	background-color: #4FC8ED;
+}
+
 .overlay {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 67%;
-	/*width: 100%; */
+	height: 100%;
 	opacity: 0;
-	transition: .5s ease;
-	background-color: #4FC8ED;
+	/* transition: visibility 1.5s ease; */
+	/* background-color: #4FC8ED; */
 	border-radius: 50%;
-	
 }
 
 .overlay-text {
@@ -1384,19 +1397,13 @@ Team section
 	left: 35%;
 }
 
-/* .popup {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-} */
 
 .card .card-image:hover .overlay {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .card a:hover .overlay {
-	opacity: 0.5;
+	/* opacity: 0.5; */
 }
 
 
@@ -1429,6 +1436,10 @@ Team section
 
 .modal-left {
 	width: 40%;
+}
+
+.modal-left .modal-name {
+	padding: 0px;
 }
 
 .modal-left p {
@@ -1514,6 +1525,9 @@ Team section
 		visibility: visible;
 		width: 80%;
 	}
+	.filter-list-mobile .departments option {
+		line-height: 5em;
+	}
 	.filter-list-mobile .departments {
 		width: 100%;
 		background-color: black;
@@ -1542,6 +1556,9 @@ Team section
 	}
 	.overlay {
 		display: none;
+	}
+	.card-image:hover .opaque-image {
+		visibility: visible;
 	}
   }
 

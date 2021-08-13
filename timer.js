@@ -56,6 +56,8 @@ function toggleTeamModal(e){
 
     var modalIdString = `modal-${idNumber}`;
     var modal = document.getElementById(modalIdString);
+
+    console.log(target)
     
     // Get the <span> element that closes the modal (again, using event to match)
     var closeSpanIdString = `close-span-${idNumber}`;
