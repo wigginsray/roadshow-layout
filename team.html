@@ -97,8 +97,8 @@
                 </select>
             </div>
             <div class="avatars-container">
-                <ul class="avatars">
-                    <li class="card">
+                <div class="avatars">
+                    <div class="card">
                         <div class="card-image">
                             <div class="overlay" onClick="toggleTeamModal()">
                                 <div class="overlay-text">Click me</div>
@@ -134,8 +134,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="card">
+                    </div>
+                    <div class="card">
                         <div class="card-image">
                             <div class="overlay" onClick="toggleTeamModal()">
                                 <div class="overlay-text">Click me</div>
@@ -146,7 +146,7 @@
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
                             <a>
-                                <div class="bio-button">View Bio</div>
+                                <div class="bio-button" onclick="toggleTeamModal()">View Bio</div>
                             </a>
                         </div>
                         <div class="modal">
@@ -172,8 +172,8 @@
                             </div>
                         </div>
 
-                    </li>
-                    <li class="card">
+                    </div>
+                    <div class="card">
                         <div class="card-image">
                             <div class="overlay" onClick="toggleTeamModal()">
                                 <div class="overlay-text">Click me</div>
@@ -184,7 +184,7 @@
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
                             <a>
-                                <div class="bio-button">View Bio</div>
+                                <div class="bio-button" onclick="toggleTeamModal()">View Bio</div>
                             </a>
                         </div>
                         <div id="myModal" class="modal">
@@ -213,8 +213,8 @@
                             </div>
                             
                         </div>
-                    </li>
-                    <li class="card">
+                    </div>
+                    <div class="card">
                         <a href="#">
                             <div>
                                 <div class="overlay">
@@ -227,11 +227,11 @@
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
                             <a>
-                                <div class="bio-button">View Bio</div>
+                                <div class="bio-button" onclick="toggleTeamModal()">View Bio</div>
                             </a>
                         </div>
-                    </li>
-                    <li class="card">
+                    </div>
+                    <div class="card">
                         <a href="#">
                             <div>
                                 <div class="overlay">
@@ -247,11 +247,11 @@
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
                             <a>
-                                <div class="bio-button">View Bio</div>
+                                <div class="bio-button" onclick="toggleTeamModal()">View Bio</div>
                             </a>
                         </div>
-                    </li>
-                    <li class="card">
+                    </div>
+                    <div class="card">
                         <a href="#">
                             <div>
                                 <div class="overlay">
@@ -264,13 +264,12 @@
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
                             <a>
-                                <div class="bio-button">View Bio</div>
+                                <div class="bio-button" onclick="toggleTeamModal()">View Bio</div>
                             </a>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-
         </section>
     </div>
 
@@ -313,8 +312,13 @@
         for(var i=0; i < modals.length; i++){
             modals[i].id = "modal-" + (i + 1).toString();
         }
+
+        var bioButtons = document.querySelectorAll('.bio-button');
+        for(var i=0; i < bioButtons.length; i++){
+            bioButtons[i].id = "bioButtons-" + (i + 1).toString();
+        }
         
-        console.log(modals);
+        console.log(bioButtons);
 
     </script>
 

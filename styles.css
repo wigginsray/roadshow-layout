@@ -1345,6 +1345,14 @@ Team section
 
 .card .bio-button {
 	visibility: hidden;
+	transition: background-color 0.5s;
+}
+
+
+.bio-button:hover {
+	background-color: #4FC8ED;
+	cursor: pointer;
+	/* color: black; */
 }
 
 .card h5 {
@@ -1455,6 +1463,13 @@ Team section
 	width: fit-content;
 	padding: 0.7em;
 	margin-top: 2em;
+	transition: background-color 0.5s;
+}
+
+.portfolio-button:hover {
+	background-color: #4FC8ED;
+	cursor: pointer;
+	/* color: black; */
 }
 
 .modal-left a {
@@ -1463,9 +1478,9 @@ Team section
 
   /* The Close Button */
   .close {
-	color: #aaa;
+	color: white;
 	float: right;
-	font-size: 28px;
+	font-size: 38px;
 	font-weight: bold;
   }
   
@@ -1543,6 +1558,28 @@ Team section
 	}
 	.overlay {
 		display: none;
+	}
+	.modal {
+		margin-top: 5em;
+	}
+	.modal-left {
+		width: 90%;
+		padding-bottom: 2em;
+	}
+	.modal-right {
+		padding-left: 0px;
+	}
+	.modal-content {
+		flex-direction: column;
+		align-items: center;
+		/* margin */
+	}
+	.portfolio-button {
+		align-self: center;
+	}
+	.close {
+		position: absolute;
+		left: 75%;
 	}
   }
 
