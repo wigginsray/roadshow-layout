@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6348478/7736412/css/fonts.css" />
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-	
+	<script src="./timer.js"></script>
 
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
@@ -99,7 +99,118 @@
             <div class="avatars-container">
                 <ul class="avatars">
                     <li class="card">
-                        <a href="#"><img src="./avatar.png"/></a>
+                        <div class="card-image">
+                            <div class="overlay" onClick="toggleTeamModal()">
+                                <div class="overlay-text">Click me</div>
+                            </div>
+                            <img src="./avatar.png"/>
+                        </div>
+                        <div class="additional-info">
+                            <h4>Team Member</h4>
+                            <h5>Job Title</h5>
+                            <a>
+                                <div class="bio-button">View Bio</div>
+                            </a>
+                        </div>
+                        <div class="modal">
+                            <div class="modal-container">
+                                <div class="modal-content">
+                                    <div class="modal-left">
+                                        <img src="./avatar.png" />
+                                        <p class="modal-name"><strong>Team Member</strong></p>
+                                        <p class="modal-title">Job Title</p>
+                                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
+
+                                    </div>
+                                    <div class="modal-right">
+                                        <p><strong>Focus:</strong> first modal.</p>
+                                        <p><strong>Special Skills:</strong> different text</p>
+                                        <p><strong>Previous Accounts:</strong> significant brands from past</p>
+                                        <p><strong>Talk to me about:</strong> wildcard field, professional or private</p>
+                                        <div class="portfolio-button">View Portfolio</div>
+                                    </div>
+                                    <span class="close">&times;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card-image">
+                            <div class="overlay" onClick="toggleTeamModal()">
+                                <div class="overlay-text">Click me</div>
+                            </div>
+                            <img src="./avatar2.png"/>
+                        </div>
+                        <div class="additional-info">
+                            <h4>Team Member</h4>
+                            <h5>Job Title</h5>
+                            <a>
+                                <div class="bio-button">View Bio</div>
+                            </a>
+                        </div>
+                        <div class="modal">
+                            <div class="modal-container">
+                                <div class="modal-content">
+                                    <div class="modal-left">
+                                        <img src="./avatar2.png" />
+                                    </div>
+                                    <div class="modal-right">
+                                        <p>Focus: couple keywords on specialties, discipline, etc.</p>
+                                        <p>Special Skills: cross-functional skills, superpowers</p>
+                                        <p>Previous Accounts: significant brands from past</p>
+                                        <p>Talk to me about: wildcard field, professional or private</p>
+                                    </div>
+                                    <span class="close">&times;</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="card">
+                        <div class="card-image">
+                            <div class="overlay" onClick="toggleTeamModal()">
+                                <div class="overlay-text">Click me</div>
+                            </div>
+                            <img src="./avatar3.png"/>
+                        </div>
+                        <div class="additional-info">
+                            <h4>Team Member</h4>
+                            <h5>Job Title</h5>
+                            <a>
+                                <div class="bio-button">View Bio</div>
+                            </a>
+                        </div>
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-container">
+                                
+                                <div class="modal-content">
+                                    <div class="modal-left">
+                                        <img src="./avatar3.png" />
+                                    </div>
+                                    <div class="modal-right">
+                                        <p>Focus: couple keywords on specialties, discipline, etc.</p>
+                                        <p>Special Skills: cross-functional skills, superpowers</p>
+                                        <p>Previous Accounts: significant brands from past</p>
+                                        <p>Talk to me about: wildcard field, professional or private</p>
+                                    </div>
+                                    <span class="close">&times;</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li class="card">
+                        <a href="#">
+                            <div>
+                                <div class="overlay">
+                                    <div class="overlay-text">Click me</div>
+                                </div>
+                                <img src="./avatar2.png"/>
+                            </div>
+                        </a>
                         <div class="additional-info">
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
@@ -109,7 +220,17 @@
                         </div>
                     </li>
                     <li class="card">
-                        <a href="#"><img src="./avatar2.png"/></a>
+                        <a href="#">
+                            <div>
+                                <div class="overlay">
+                                    <div class="overlay-text">Click me</div>
+                                </div>
+                                <span>
+
+                                </span>
+                                <img src="./avatar3.png"/>
+                            </div>
+                        </a>
                         <div class="additional-info">
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
@@ -119,37 +240,14 @@
                         </div>
                     </li>
                     <li class="card">
-                        <a href="#"><img src="./avatar3.png"/></a>
-                        <div class="additional-info">
-                            <h4>Team Member</h4>
-                            <h5>Job Title</h5>
-                            <a>
-                                <div class="bio-button">View Bio</div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <a href="#"><img src="./avatar2.png"/></a>
-                        <div class="additional-info">
-                            <h4>Team Member</h4>
-                            <h5>Job Title</h5>
-                            <a>
-                                <div class="bio-button">View Bio</div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <a href="#"><img src="./avatar3.png"/></a>
-                        <div class="additional-info">
-                            <h4>Team Member</h4>
-                            <h5>Job Title</h5>
-                            <a>
-                                <div class="bio-button">View Bio</div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <a href="#"><img src="./avatar.png"/></a>
+                        <a href="#">
+                            <div>
+                                <div class="overlay">
+                                    <div class="overlay-text">Click me</div>
+                                </div>
+                                <img src="./avatar.png"/>
+                            </div>
+                        </a>
                         <div class="additional-info">
                             <h4>Team Member</h4>
                             <h5>Job Title</h5>
@@ -187,6 +285,27 @@
 				}
 			});
 	</script>
+
+    <script>
+        var overlays = document.querySelectorAll('.overlay');
+        for(var i=0; i < overlays.length; i++){
+            overlays[i].id = "overlay-click-" + (i + 1).toString();
+        }
+
+        var closeSpans = document.querySelectorAll('.close');
+        for(var i=0; i < closeSpans.length; i++){
+            closeSpans[i].id = "close-span-" + (i + 1).toString();
+        }
+
+        var modals = document.querySelectorAll('.modal');
+        for(var i=0; i < modals.length; i++){
+            modals[i].id = "modal-" + (i + 1).toString();
+        }
+        
+        console.log(modals);
+
+    </script>
+
 </body>
 
 </html>

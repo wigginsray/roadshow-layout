@@ -30,17 +30,55 @@ function displayTimeLeft(seconds){
 
 
 function openNav(){
-    // var links = document.querySelector('.links');
-    // if(links.style.display === 'block'){
-    //     links.style.display = 'none';
-    // } else {
-    //     links.style.display = 'block';
-    // }
     var icon = document.querySelector('.icon');
     var navMenu = document.querySelector('.nav-menu');
+
     icon.classList.toggle("active");
     navMenu.classList.toggle("active");
-
 }
+
+function toggleDocumentView(e){
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+
+    var newTarget = target.querySelector('.documents-icon');
+    console.log(newTarget);
+    newTarget.classList.toggle("active");
+    
+}
+
+function toggleTeamModal(e){
+    // use event to grab ID of targetted overlay, then find corresponding modal
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+    var idArr = target.id.split('');
+    var idNumber = idArr.slice(-1)[0];
+
+    var modalIdString = `modal-${idNumber}`;
+    var modal = document.getElementById(modalIdString);
+    
+    // Get the <span> element that closes the modal (again, using event to match)
+    var closeSpanIdString = `close-span-${idNumber}`;
+    var span = document.getElementById(closeSpanIdString);
+
+    // change modal display from 'display: none'
+    modal.style.display = "block";
+    
+    // When the user clicks on <span> (x), change display back to 'none'--build this out for clicking outside container and pressing ESC
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // var container = document.querySelector('.modal-container');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    // window.onclick = function(event) {
+    //   if (event.target == container) {
+    //     modal.style.display = "none";
+    //   }
+    // }
+}
+
+
 // console.log(timerDisplay)
 // timer(155);

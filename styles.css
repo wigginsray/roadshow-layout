@@ -104,6 +104,16 @@ h2 {
 	font-weight: 800;
 }
 
+h1 {
+	font-family: 'Gotham' !important;
+	font-weight: 800;
+}
+
+h3 {
+	font-family: 'Gotham' !important;
+	font-weight: 800;
+}
+
 /*-------------
  	Header
 -------------*/
@@ -305,7 +315,8 @@ header nav a:hover {
 	min-width: 65%;
 }
 .about-title-top hr {
-	margin-left: 32em;
+	margin-left: 33em;
+	margin-top: 1em;
 	width: 100%;
 }
 
@@ -340,8 +351,8 @@ header nav a:hover {
 
 .about-event h3 {
 	color: white;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: 100px;
+	font-family: 'Gotham';
+	font-size: 80px;
 	text-transform: uppercase;
 }
 
@@ -373,7 +384,7 @@ header nav a:hover {
 	}
 	.about-title-top hr {
 		margin-top: -3em;
-		margin-left: 18.5em;
+		margin-left: 19em;
 	}
 	.about-title-right {
 		margin-top: 5em;
@@ -382,7 +393,7 @@ header nav a:hover {
 		padding-top: 5em;
 	}
 	.about-title-top hr {
-		margin-top: -8.5em;
+		margin-top: -8em;
 	}
 }
 
@@ -411,8 +422,8 @@ header nav a:hover {
 		padding: 1em;
 	}
 	.about-title-top hr {
-		margin-top: -5.5em;
-		margin-left: 20em;
+		margin-top: -5em;
+		margin-left: 21em;
 		/* margin-left: -19em; */
 	}
 }
@@ -447,7 +458,7 @@ header nav a:hover {
 	}
 	.about-title-right hr{
 		margin-top: -2.5em;
-		margin-left: 8em;
+		margin-left: 10em;
 	}
 	.desktop {
 		display: none;
@@ -1336,9 +1347,135 @@ Team section
 	visibility: hidden;
 }
 
+.card h5 {
+	color: #4FC8ED;
+}
+
 .filter-list-mobile {
 	visibility: hidden;
 }
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 67%;
+	/*width: 100%; */
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #4FC8ED;
+	border-radius: 50%;
+	
+}
+
+.overlay-text {
+	position: absolute;
+	top: 40%;
+	left: 35%;
+}
+
+/* .popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} */
+
+.card .card-image:hover .overlay {
+	opacity: 0.5;
+}
+
+.card a:hover .overlay {
+	opacity: 0.5;
+}
+
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+	display: flex;
+	background-color: black;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 50px;
+	border: 1px solid white;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+  
+.modal-container {
+	display: flex;
+}
+
+.modal-left {
+	width: 40%;
+}
+
+.modal-left p {
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+.modal-left .modal-name {
+	margin-top: 1.5em;
+}
+
+.modal-left .modal-title {
+	margin-bottom: 0.5em;
+	color: #4FC8ED;
+}
+
+.modal-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.modal-right p {
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+.portfolio-button {		
+	border: 1px solid #4FC8ED;
+	width: fit-content;
+	padding: 0.7em;
+	margin-top: 2em;
+}
+
+.modal-left a {
+	padding: 0.5em;
+}
+
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+
+
 
   @media (max-width: 1000px){
 	.team-title-text {
@@ -1385,6 +1522,9 @@ Team section
 		width: fit-content;
 		padding: 0.7em;
 	}
+	.overlay {
+		display: none;
+	}
   }
 
 /*-------------
@@ -1410,6 +1550,115 @@ Team section
 	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 	text-transform: uppercase;
 }
+
+.list-content {
+	width: 75%;
+}
+
+.document-list-item {
+	/* display: flex; */
+	border-top: 1px solid white;
+	border-bottom: none;
+}
+
+.collapsible {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	/* border-top: 1px solid white; */
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+  }
+
+  .collapsible li {
+	  float: left;
+	  padding-right: 3em;
+  }
+  
+  .collapsible:hover {
+	background-color: #555;
+  }
+  
+  .content {
+	/* padding: 0 18px; */
+	/* display: none; */
+	height: 0px;
+	overflow: hidden;
+	background-color: black;
+	color: white;
+	transition: height 0.5s;
+  }
+
+  .content img {
+	  /* width: 30%; */
+	  padding-top: 2em;
+	  padding-bottom: 2em;
+  }
+
+  .content p {
+	  padding: 2em;
+	  width: 80%;
+
+  }
+
+  .bold-field {
+	  font-style: bold;
+  }
+
+.view-document-button {
+	border: 1px solid #4FC8ED;
+	width: fit-content;
+	padding: 0.7em;
+	margin-left: 2em;
+	margin-top: -3em;
+	text-transform: uppercase;
+}
+
+.documents-icon {
+	margin-right: -95%;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.documents-bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+}
+
+.second-bar {
+	transform: translateY(8px) rotate(-90deg);
+	margin-top: -1.1em;
+
+}
+
+.documents-icon.active {
+	transform: rotate(135deg);
+}
+
+
+/* .documents-icon.active .documents-bar:nth-child(1){
+	transform: translateY(8px) rotate(-45deg);
+}
+
+.documents-icon.active .documents-bar:nth-child(2){
+	transform: translateY(-8px) rotate(45deg);
+} */
+
+
+
+
+
 
 /*-------------
  	Footer
