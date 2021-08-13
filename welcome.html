@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASTOUND Digital Roadshow</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6348478/7736412/css/fonts.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	<script src="./timer.js"></script>
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+	<!-- Optional theme -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+	<!-- Latest compiled and minified JavaScript -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+</head>
+
+<body>
+
+	<header class="desktop">
+		<a href="./home.html"><img class="company-logo" src="https://image4.owler.com/logo/astound_owler_20160226_185256_original.jpg" alt="ASTOUND Group"></a>
+		<nav class="links">
+			<li><a href="./projectSingle.html">About</a></li>
+			<li><a href="./team.html">Team</a></li>
+			<li><a href="./projects.html">Projects</a></li>
+			<li><a href="./documents.html">Documents</a></li>
+		</nav>
+	</header>
+
+	<header class="responsive">
+		<a href="./home.html"><img class="company-logo" src="https://image4.owler.com/logo/astound_owler_20160226_185256_original.jpg" alt="ASTOUND Group"></a>
+		<nav class="navbar">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a class="nav-link" href="./projectSingle.html">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./team.html">Team</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./projects.html">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./documents.html">Documents</a>
+				</li>
+			</ul>
+			<a href="javascript:void(0);" class="hamburger-link"onclick="openNav()">
+				<div class="icon">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</a>
+		</nav>
+	</header>
+
+    <div class="welcome-modal">
+        <div class="welcome-modal-container">
+            <div class="welcome-modal-content">
+                <img class="company-logo" src="https://image4.owler.com/logo/astound_owler_20160226_185256_original.jpg" alt="ASTOUND Group">
+                <h2>Sign in to the livestream</h2>
+                <form class="welcome-form">
+                    <input type="password" id="password" name="password" placeholder="PASSWORD">
+                    <input type="submit" id="submit-button" value="ENTER">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="bg-video" style="background-image: url('./astound_digital_002.jpg');">
+        <video preload="metadata" class="hidden-xs" autoplay muted loop id="bgvid">
+          <source src="./astound_digital_002.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- <div class="arrow-container">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </div> -->
+      
+      <!-- <div id="video-overlay"> -->
+
+    <footer>
+		<p> &copy; 2021 ASTOUND ALL RIGHTS RESERVED</p>
+		<ul>
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-snapchat"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="#"><i class="fa fa-github"></i></a></li>
+		</ul>
+	</footer>
+
+	<script src="timer.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+			AOS.init({
+				disable: function() {
+					var maxWidth = 800;
+					return window.innerWidth < maxWidth;
+				}
+			});
+	</script>
+
+</body>
+</html>
