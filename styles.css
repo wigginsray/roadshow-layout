@@ -274,16 +274,81 @@ header nav a:hover {
 }
 
 .home-title h2 {
-	font-size: 64px;
+	font-size: 100px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-transform: uppercase;
 }
 
 .title-container {
+	position: absolute;
 	display: flex;
-	flex-direction: row-reverse;
-	min-width: 3000px;
-	margin-left: -45%;
+	flex-direction: column;
+	/* min-width: 3000px;
+	margin-left: -55%; */
+	z-index: 10;
+	top: 60%;
+	left: 10%;
+}
+
+
+#bg-video-home {
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	font-size: 0;
+	background-color: #000000;
+}
+
+#bg-video-home video {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* min-height: 100vh; */
+	height: 100vh;
+	/* width: 100vw; */
+	/* min-width: 100%; */
+	max-width: none;
+	}
+#bg-video video.hidden-xs {
+	display: block;
+}
+
+.arrow-container-home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 99999;
+	position: absolute;
+	bottom: 15px;
+	width: 100px;
+	height: 200px;
+  }
+  
+  .chevron {
+	position: absolute;
+	width: 35px;
+	height: 8px;
+	opacity: 0;
+	transform: scale(0.3);
+	animation: move-chevron 3s ease-out infinite;
+	color: white;
+  }
+
+  .home-image {
+	  display: none;
+  }
+
+@media (min-width: 1000px){
+	.title-container hr {
+		visibility: hidden;
+	}
 }
 
 @media (max-width: 850px){
@@ -338,9 +403,11 @@ header nav a:hover {
 	display: flex;
 	/* flex-direction: row; */
 	padding-top: 5rem;
+	margin-top: 55em;
 	/* padding-bottom: 5rem; */
 	/* width: 70%; */
 	overflow: hidden;
+	margin-bottom: 10em;
 }
 
 .about-container {
@@ -370,6 +437,10 @@ header nav a:hover {
 	width: 45%;
 }
 
+.desktop {
+	z-index: 50;
+}
+
 .responsive {
 	display: none;
 }
@@ -381,6 +452,10 @@ header nav a:hover {
 		margin: 0px;
 		width: 100%;
 		/* padding-top: 3em; */
+	}
+	.title-container {
+		position: relative;
+		left: 0;
 	}
 	.about-title-top hr {
 		margin-top: -3em;
@@ -394,6 +469,22 @@ header nav a:hover {
 	}
 	.about-title-top hr {
 		margin-top: -8em;
+	}
+	.about-event {
+		margin-top: 0px;
+	}
+	#bg-video-home {
+		display: none;
+	}
+	.arrow-container-home {
+		display: none;
+	}
+	.home-image {
+		display: block;
+		margin-top: 3em;
+	}
+	.home-image img {
+		width: 100vw;
 	}
 }
 
@@ -1016,8 +1107,17 @@ outline-width: 15px;
 	.our-work .grid li.large{
 		flex-basis: 100%;
 	}
-	.our-work {
+	.our-work .grid .half {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	.our-work .grid .half {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	.our-work .grid .bottom-right {
 		padding-top: 0px;
+		margin-top: 1em;
 	}
 	.projects-title-text {
 		width: 85%;
@@ -1031,18 +1131,17 @@ outline-width: 15px;
 	.our-work .grid .bottom-left {
 		height: 350px;;
 	}
-	.our-work .grid .bottom-right {
-		margin: 0px;
-	}
 	.our-work .grid .top-right {
 		height: 350px;;
 	}
 	.our-work .grid .middle {
-		margin-left: 0px;
 		flex-basis: 100%;
 	}
 	.our-work .grid .project {
 		visibility: visible;
+	}
+	.our-work .grid .project {
+		opacity: 1;
 	}
 	
 }
@@ -1098,7 +1197,7 @@ Single Project section
 	background-color: #4FC8ED;
 	padding: 2em;
 	line-height: 1;
-	margin-left: -15%;
+	margin-left: -25%;
 }
 
 .single-project-description {
@@ -1113,6 +1212,9 @@ Single Project section
 
 .project-additional-info-container {
 	display: flex;
+	margin-top: 1em;
+	width: 100%;
+	justify-content: space-between;
 }
 
 .project-additional-info-container h4 {
@@ -1125,11 +1227,11 @@ Single Project section
 }
 
 .project-additional-info-1 {
-	margin-right: 2em;
+	/* margin-right: 2em; */
 }
 
 .project-additional-info-2 {
-	margin-left: 2em;
+	/* margin-left: 2em; */
 }
 
 .single-project-grid-container {
@@ -1144,12 +1246,28 @@ Single Project section
 	height: 40em;
 }
 
+.description-text h4 {
+	padding-bottom: 10px;
+	font-size: 1.5em;
+	text-transform: uppercase;
+
+}
+
 .single-project-middle-blurb {
 	padding: 50px 50px;
 	padding-bottom: 0px;
 	align-items: flex-end;
-	padding-left: 40em;
+	padding-left: 20em;
 }
+
+.single-project-middle-blurb h4 {
+	padding: 10px 20px;
+	font-size: 1.5em;
+	text-transform: uppercase;
+
+}
+
+
 
 .project-testimonials {
 	padding: 50px 50px;
@@ -1163,6 +1281,7 @@ Single Project section
 
 .blurb-container {
 	display: flex;
+	flex-direction: column;
 }
 
 .fa-quote-left {
@@ -1185,7 +1304,7 @@ Single Project section
 		width: 100%;
 	}
 	.single-project-title {
-		margin-left: -24em;
+		margin-left: -28em;
 		margin-top: 25em;
 	}
 	.single-project-description {
@@ -1193,6 +1312,10 @@ Single Project section
 		width: 100%;
 		padding-top: 0px;
 		padding-bottom: 0px;
+	}
+	.description-text p {
+		margin-bottom: 0px;
+		padding-bottom: 1em;
 	}
 	.single-project-grid-container {
 		padding-bottom: 1em;
@@ -1291,7 +1414,7 @@ Team section
 }
 
 .filter-list {
-	width: 100%;
+	width: 75%;
 }
 
 .filter-list .links{
