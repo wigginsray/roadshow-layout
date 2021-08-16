@@ -271,6 +271,8 @@ header nav a:hover {
 	padding-top: 11rem;
 	padding-bottom: 3rem;
 	overflow: hidden;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 .home-title h2 {
@@ -286,8 +288,12 @@ header nav a:hover {
 	/* min-width: 3000px;
 	margin-left: -55%; */
 	z-index: 10;
-	top: 60%;
+	/* top: 60%; */
 	left: 10%;
+}
+
+.title-container h2 {
+	text-shadow: 2px 2px black;
 }
 
 
@@ -473,6 +479,7 @@ header nav a:hover {
 	}
 	.about-event {
 		margin-top: 0px;
+		margin-bottom: 0px;
 	}
 	#bg-video-home {
 		display: none;
@@ -1103,7 +1110,9 @@ outline-width: 15px;
 
 
 @media (max-width: 1000px){
-
+	.our-work {
+		padding-top: 0px;
+	}
 	.our-work .grid li.small,
 	.our-work .grid li.large{
 		flex-basis: 100%;
@@ -1395,7 +1404,7 @@ Team section
 
 .team-section h2 {
 	font-size: 90px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 	text-transform: uppercase;
 }
 
@@ -1430,12 +1439,20 @@ Team section
 .filter-list .links a:hover {
 	color: #4FC8ED;
 	/* text-decoration: underline; */
-	border-bottom: 4px solid #4FC8ED;
-	padding-bottom: 0.7em;
+	/* border-bottom: 4px solid #4FC8ED;
+	padding-bottom: 0.7em; */
 	transition: transform 2000;
 }
 
+.filter-active {
+	border-bottom: 4px solid #4FC8ED;
+	padding-bottom: 0.7em;
+}
 
+/* .filter-inactive {
+	border-bottom: 0px;
+	padding-bottom: 0px;
+} */
 
 .avatars-container {
 	margin-top: 5em;
@@ -1556,7 +1573,7 @@ Team section
 	width: 100%; /* Full width */
 	height: 100%; /* Full height */
 	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
+	/* background-color: rgb(0,0,0);  Fallback color */
   }
   
   /* Modal Content/Box */
@@ -1571,6 +1588,10 @@ Team section
   
 .modal-container {
 	display: flex;
+}
+
+.obscure {
+	opacity: 0.3;
 }
 
 .modal-left {
@@ -1636,9 +1657,15 @@ Team section
   
   .close:hover,
   .close:focus {
-	color: black;
+	/* color: black; */
 	text-decoration: none;
 	cursor: pointer;
+  }
+
+  @media (min-width: 1100px){
+	  .close {
+		  margin-left: 3em;
+	  }
   }
 
   @media (max-width: 1000px){

@@ -1,6 +1,6 @@
 let countdown;
 const timerDisplay = document.querySelector('.display-time-left');
-console.log(timerDisplay);
+// console.log(timerDisplay);
 
 function timer(seconds){
     const now = Date.now();
@@ -60,13 +60,11 @@ function toggleTeamModal(e){
         target = e.path[1].children[0];
     }
 
-    var idArr = target.id.split('');
+    var idArr = target.id.split('-');
     var idNumber = idArr.slice(-1)[0];
 
     var modalIdString = `modal-${idNumber}`;
     var modal = document.getElementById(modalIdString);
-
-    // console.log(target)
     
     // Get the <span> element that closes the modal (again, using event to match)
     var closeSpanIdString = `close-span-${idNumber}`;
@@ -74,10 +72,39 @@ function toggleTeamModal(e){
 
     // change modal display from 'display: none'
     modal.style.display = "block";
+
+    var teamTitleSection = document.querySelector('.team-section');
+    var teamContainer = document.querySelector('.team-container');
+    var filterList = document.querySelector('.filter-list');
+
+    var cards = document.querySelectorAll('.card-image');
+    var infoboxes = document.querySelectorAll('.additional-info');
+
+    teamTitleSection.classList.toggle('obscure');
+    // teamContainer.classList.toggle('obscure');
+    filterList.classList.toggle('obscure');
+
+    cards.forEach(card => {
+        card.classList.toggle('obscure');
+    })
+
+    infoboxes.forEach(box => {
+        box.classList.toggle('obscure');
+    })
     
+
     // When the user clicks on <span> (x), change display back to 'none'--build this out for clicking outside container and pressing ESC
     span.onclick = function() {
-      modal.style.display = "none";
+        modal.style.display = "none";
+        teamTitleSection.classList.toggle('obscure');
+        filterList.classList.toggle('obscure');
+        cards.forEach(card => {
+            card.classList.toggle('obscure');
+        })
+        infoboxes.forEach(box => {
+            box.classList.toggle('obscure');
+        })
+        // teamContainer.classList.toggle('obscure');
     }
 
     // var container = document.querySelector('.modal-container');
