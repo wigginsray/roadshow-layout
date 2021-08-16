@@ -41,8 +41,12 @@ function toggleDocumentView(e){
     e = e || window.event;
     var target = e.target || e.srcElement;
 
+    if(target.type != 'button'){
+        target = e.path[2];
+    }
+    
     var newTarget = target.querySelector('.documents-icon');
-    console.log(newTarget);
+    // console.log(newTarget);
     newTarget.classList.toggle("active");
     
 }
