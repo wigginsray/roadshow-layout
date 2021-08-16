@@ -55,13 +55,18 @@ function toggleTeamModal(e){
     // use event to grab ID of targetted overlay, then find corresponding modal
     e = e || window.event;
     var target = e.target || e.srcElement;
+
+    if(target.classList[0] != 'transparent-image'){
+        target = e.path[1].children[0];
+    }
+
     var idArr = target.id.split('');
     var idNumber = idArr.slice(-1)[0];
 
     var modalIdString = `modal-${idNumber}`;
     var modal = document.getElementById(modalIdString);
 
-    console.log(target)
+    // console.log(target)
     
     // Get the <span> element that closes the modal (again, using event to match)
     var closeSpanIdString = `close-span-${idNumber}`;

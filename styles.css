@@ -778,6 +778,15 @@ margin-right: 10em;
 	align-items: flex-start;
 }
 
+@media screen and (min-width: 1200px){
+	.middle {
+		flex-basis: 45%;
+		/* display: none; */
+	}
+}
+
+
+
 .projects-section h2 {
 	font-size: 100px;
 	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
@@ -1365,12 +1374,12 @@ Team section
 	visibility: hidden;
 }
 
-.overlay-2 {
-
-}
-
 .card-image:hover .opaque-image {
 	visibility: hidden;
+}
+
+.card-image:hover .transparent-image {
+	cursor: pointer;
 }
 
 .card-image:hover .transparent-image {
@@ -1379,6 +1388,7 @@ Team section
 }
 
 .overlay {
+	/* display: flex; */
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -1393,8 +1403,13 @@ Team section
 
 .overlay-text {
 	position: absolute;
-	top: 40%;
-	left: 35%;
+	top: 30%;
+	left: 31%;
+	font-size: 1.5em;
+}
+
+.overlay-text:hover {
+	cursor: pointer;
 }
 
 
