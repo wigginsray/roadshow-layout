@@ -456,6 +456,7 @@ header nav a:hover {
 	.title-container {
 		position: relative;
 		left: 0;
+		z-index: 1;
 	}
 	.about-title-top hr {
 		margin-top: -3em;
