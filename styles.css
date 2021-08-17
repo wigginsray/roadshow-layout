@@ -289,11 +289,12 @@ header nav a:hover {
 	margin-left: -55%; */
 	z-index: 10;
 	/* top: 60%; */
-	left: 10%;
+	left: 90px;
+	line-height: 90px;
 }
 
 .title-container h2 {
-	text-shadow: 2px 2px black;
+	text-shadow: 0 2px 4px rgb(0 0 0 / 55%);
 }
 
 
@@ -649,10 +650,12 @@ header nav a:hover {
 	text-align: center;
 	vertical-align: middle;
 	top: 50%;
+	text-shadow: 2px 2px black;
 }
 
 .team-link h1 {
 	font-size: 70px;
+	/* text-shadow: 2px 2px black; */
 	/* top: 40%; */
 }
 
@@ -1207,7 +1210,7 @@ Single Project section
 
 .project-hero-image {
 	width: 70%;
-	height: 30em;
+	/* height: 30em; */
 }
 
 .single-project-title {
@@ -1234,6 +1237,11 @@ Single Project section
 	justify-content: space-between;
 }
 
+.project-additional-info-container h2 {
+	color: #4FC8ED;
+	align-self: center;
+} 
+
 .project-additional-info-container h4 {
 	text-transform: uppercase;
 	padding-bottom: 1em;
@@ -1245,10 +1253,14 @@ Single Project section
 
 .project-additional-info-1 {
 	/* margin-right: 2em; */
+	display: flex;
+	flex-direction: column;
 }
 
 .project-additional-info-2 {
 	/* margin-left: 2em; */
+	display: flex;
+	flex-direction: column;
 }
 
 .single-project-grid-container {
@@ -1321,8 +1333,11 @@ Single Project section
 		width: 100%;
 	}
 	.single-project-title {
-		margin-left: -28em;
+		margin-left: -20em;
 		margin-top: 25em;
+	}
+	.single-project-title h2 {
+		font-size: 40px;
 	}
 	.single-project-description {
 		margin-left: 0px;
@@ -1371,11 +1386,12 @@ Single Project section
 		font-size: 40px;
 	}
 	.single-project-title-section img {
-		height: 20em;
+		/* height: 20em; */
 	}
 	.single-project-title {
 		margin-left: -15em;
 		margin-top: 20em;
+		padding: 1em;
 	}
 	.single-project-description {
 		padding-right: 1em;
