@@ -57,6 +57,7 @@ section{
 	/* padding: 100px 100px; */
 }
 
+
 @media (max-width: 1000px){
 
 	section{
@@ -163,6 +164,8 @@ header nav li:last-child{
 
 header nav a {
 	transition: color 0.1s ease-out;
+	font-family: 'din-2014';
+	font-weight: 0;
 }
 
 header nav a:hover {
@@ -894,7 +897,158 @@ margin-right: 10em;
 	}
 }
 
+.projects-grid {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
 
+.projects-grid .project {
+	font-size: 1.5em;
+}
+
+.projects-grid .projects-row-1 {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.projects-grid .projects-row-1 .upper-left {
+	padding-top: 8.5em;
+	width: 30%;
+}
+
+.projects-grid .projects-row-1 .upper-right {
+	width: 50%;
+}
+
+.projects-grid .projects-row-1 .upper-left img {
+	width: 100%;
+	outline: solid 0px hotpink;
+	transition: outline 0.5s linear;
+}
+
+.projects-grid .projects-row-1 .upper-left img:hover {
+	outline: solid 1em hotpink;
+}
+
+.projects-grid .projects-row-1 .upper-right img {
+	width: 100%;
+	outline: solid opx lightblue;
+	transition: outline 0.5s linear;
+}
+
+.projects-grid .projects-row-1 .upper-right img:hover {
+	outline: solid 1em lightblue;
+}
+
+.projects-grid .projects-row-1 .project-2-text {
+	position: absolute;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+.projects-grid .projects-row-1 .project-1-text {
+	position: absolute;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+.projects-grid .projects-row-1 img:hover {
+	cursor: pointer;
+}
+
+.projects-grid .projects-row-2 {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	padding-top: 5em;
+}
+
+.projects-grid .projects-middle {
+	width: 40%;
+	margin-left: 3em;
+}
+
+.projects-grid .projects-row-2 img {
+	width: 100%;
+	outline: solid 0px gold;
+	transition: outline 0.5s linear;
+}
+
+.projects-grid .projects-row-2 img:hover {
+	outline: solid 1em gold;
+}
+
+.projects-grid .projects-row-2 .project-3-text {
+	position: absolute;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+.projects-grid .projects-row-2 img:hover {
+	cursor: pointer;
+}
+
+.projects-grid .projects-row-3 {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-evenly;
+	padding-top: 5em;
+}
+
+.projects-grid .lower-left {
+	width: 55%;
+	padding-top: 4em;
+	/* margin-left: 3em; */
+}
+
+.projects-grid .lower-right {
+	width: 35%;
+	/* margin-left: 3em; */
+}
+
+.projects-grid .projects-row-3 img {
+	width: 100%;
+}
+
+.projects-grid .projects-row-3 .lower-left img {
+	outline: solid 0px burlywood;
+	transition: outline 0.5s linear;
+}
+
+.projects-grid .projects-row-3 .lower-left img:hover {
+	outline: solid 1em burlywood;
+}
+
+.projects-grid .projects-row-3 .lower-right img {
+	outline: solid 0px lightseagreen;
+	transition: outline 0.5s linear;
+}
+
+.projects-grid .projects-row-3 .lower-right img:hover {
+	outline: solid 1em lightseagreen;
+	
+}
+
+.projects-grid .projects-row-3 .project-4-text {
+	position: absolute;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+.projects-grid .projects-row-3 .project-5-text {
+	position: absolute;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+.projects-grid .projects-row-3 img:hover {
+	cursor: pointer;
+}
 
 .projects-section h2 {
 	font-size: 100px;
@@ -911,6 +1065,8 @@ margin-right: 10em;
 	padding-left: 11em;
 	margin-top: -6.5em;
 	width: 60%;
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .оur-work{
@@ -949,12 +1105,6 @@ margin-right: 10em;
 	/* flex-basis: 50%; */
 }
 
-/* first versions have been commented out--those styles look closer to the design, but also have annoying effects on positioning. Currently experimenting with alternatives */
-
-/* .our-work .grid .top-right {
-	height: 35em;
-	/* padding-right: 5em;
-} */
 
 .our-work .grid .top-right {
 	height: 35em;
@@ -963,22 +1113,9 @@ margin-right: 10em;
 	/* padding-right: 5em; */
 }
 
-
-/* .our-work .grid .top-right:hover {
-	padding: 5px;
-	border-top: 15px solid hotpink;
-	border-right: 15px solid hotpink;
-} */
-
 .our-work .grid .top-right:hover {
 	outline-width: 15px;
 }
-
-/* .our-work .grid .middle {
-	margin-left: 10em;
-	/* padding-left: 5em; */
-	/* padding-right: 10em;
-} */
 
 .our-work .grid .middle {
 	margin-left: 10em;
@@ -988,20 +1125,9 @@ margin-right: 10em;
 	/* padding-right: 10em; */
 }
 
-/* .our-work .grid .middle:hover {
-	padding: 5px;
-	border-bottom: 15px solid brown;
-	border-right: 15px solid brown;
-} */
-
 .our-work .grid .middle:hover {
 	outline-width: 15px;
 }
-
-/* .our-work .grid .top-left {
-	margin-top: 13em;
-	/* padding-left: 3em;
-} */
 
 .our-work .grid .top-left {
 	margin-top: 13em;
@@ -1010,21 +1136,9 @@ margin-right: 10em;
 	/* padding-left: 3em; */
 }
 
-/* .our-work .grid .top-left:hover {
-	padding: 5px;
-	border-top: 15px solid lightblue;
-	border-left: 15px solid lightblue;
-} */
-
 .our-work .grid .top-left:hover {
 	outline-width: 15px;
 }
-
-/* .our-work .grid .bottom-left {
-	height: 40em;
-	/* padding-right: 8em; */
-	/* padding-left: 5em; 
-} */
 
 .our-work .grid .bottom-left {
 	height: 40em;
@@ -1034,19 +1148,12 @@ margin-right: 10em;
 	/* padding-left: 5em; */
 }
 
-/* .our-work .grid .bottom-left:hover {
-	padding: 5px;
-	border-top: 15px solid rgb(142, 238, 185);
-	border-left: 15px solid rgb(142, 238, 185);
-} */
+
 
 .our-work .grid .bottom-left:hover {
 	outline-width: 15px;
 }
 
-/* .our-work .grid .bottom-right {
-	margin-top: 7em;
-} */
 
 .our-work .grid .bottom-right {
 	margin-top: 7em;
@@ -1054,11 +1161,6 @@ margin-right: 10em;
 	transition: outline 0.5s linear;
 }
 
-/* .our-work .grid .bottom-right:hover {
-	padding: 5px;
-	border-top: 15px solid burlywood;
-	border-right: 15px solid burlywood;
-} */
 
 .our-work .grid .bottom-right:hover {
 outline-width: 15px;
@@ -1150,16 +1252,16 @@ outline-width: 15px;
 		width: 85%;
 	}
 	.our-work .grid .top-left {
-		margin-top: 0px;;
+		margin-top: 0px;
 	}
 	.our-work .grid .top-right {
-		height: 350px;;
+		height: 350px;
 	}
 	.our-work .grid .bottom-left {
-		height: 350px;;
+		height: 350px;
 	}
 	.our-work .grid .top-right {
-		height: 350px;;
+		height: 350px;
 	}
 	.our-work .grid .middle {
 		flex-basis: 100%;
@@ -1169,6 +1271,12 @@ outline-width: 15px;
 	}
 	.our-work .grid .project {
 		opacity: 1;
+	}
+	.projects-grid .projects-row-1, .projects-grid .projects-row-2, .projects-grid .projects-row-3 {
+		flex-direction: column;
+	}
+	.upper-left, .upper-right, .projects-middle, .lower-right, .lower-left {
+		width: 100%;
 	}
 	
 }
@@ -1889,6 +1997,10 @@ Team section
 	.departments option {
 		padding: 1em;
 		margin: 1em;
+	}
+	.modal-left {
+		width: 60%;
+		padding-bottom: 1em;
 	}
   }
 
