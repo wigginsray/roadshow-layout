@@ -99,6 +99,13 @@ ul.grid{
 	justify-content: center;
 }
 
+.new-grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
 h2 {
 	font-family: 'Gotham' !important;
 	font-weight: 800;
@@ -916,10 +923,10 @@ margin-right: 10em;
 	height: 350px;
 	border-radius: 3px;
 
-	background-clip: content-box;
-	background-size: cover;
-	background-position: center;
-	background-color: #333;
+	/* background-clip: content-box; */
+	/* background-size: cover; */
+	/* background-position: center;
+	background-color: #333; */
 }
 
 .our-work .grid li.small{
@@ -1217,7 +1224,7 @@ Single Project section
 	background-color: #4FC8ED;
 	padding: 2em;
 	line-height: 1;
-	margin-left: -25%;
+	margin-left: -5em;
 }
 
 .single-project-description {
@@ -1257,22 +1264,70 @@ Single Project section
 	flex-direction: column;
 }
 
-.project-additional-info-2 {
-	/* margin-left: 2em; */
+.project-additional-info-1 .results-text {
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+	line-height: 1.6;
+}
+
+
+/* .project-additional-info-2 {
+	margin-left: 2em;
 	display: flex;
 	flex-direction: column;
-}
+} */
 
 .single-project-grid-container {
 	margin-top: 2em;
 }
 
-.our-work .grid .single-project-image-1 {
+/* .our-work .grid .single-project-image-1 {
 	height: 20em;
+} */
+
+.our-work .new-grid .single-project-image-container-1 {
+	width: 30%;
 }
 
-.our-work .grid .single-project-image-2 {
-	height: 40em;
+.our-work .new-grid .single-project-image-1 {
+	width: 100%;
+}
+
+.our-work .new-grid .single-project-image-container-2 {
+	width: 50%;
+}
+
+.our-work .new-grid .single-project-image-2 {
+	width: 100%;
+}
+
+.our-work .new-grid .single-project-image-container-3 {
+	width: 55%;
+}
+
+.our-work .new-grid .single-project-image-container-4 {
+	width: 30%;
+}
+
+.our-work .new-grid .single-project-image-3 {
+	/* height: 25em; */
+	width: 100%;
+}
+
+.our-work .new-grid .single-project-image-4 {
+	width: 100%;
+}
+
+.new-grid div {
+	/* width: 100%; */
+}
+
+.results {
+	margin-top: 3em;
+}
+
+.approach {
+	margin-bottom: 5em;
 }
 
 .description-text h4 {
@@ -1293,10 +1348,7 @@ Single Project section
 	padding: 10px 20px;
 	font-size: 1.5em;
 	text-transform: uppercase;
-
 }
-
-
 
 .project-testimonials {
 	padding: 50px 50px;
@@ -1374,6 +1426,36 @@ Single Project section
 	.our-work .grid .single-project-image-2 {
 		height: 20em;
 	}
+	.new-grid {
+		flex-direction: column;
+	}
+	.new-grid div {
+		width: 100%;
+		padding: 0px;
+	}
+	.our-work .new-grid .single-project-image-container-1 {
+		width: 100%;
+		padding-bottom: 2em;
+	}
+	.our-work .new-grid .single-project-image-container-2 {
+		width: 100%;
+	}
+	.our-work .new-grid .single-project-image-container-3 {
+		width: 100%;
+		padding-bottom: 2em;
+	}
+	.our-work .new-grid .single-project-image-container-4 {
+		width: 100%;
+	}
+	.our-work .new-grid .single-project-image-1 {
+		width: 100%;
+		height: auto;
+		padding-bottom: 1.5em;
+	}
+	.our-work .new-grid .single-project-image-2 {
+		width: 100%;
+		height: auto;
+	}
 }
 
 @media (max-width: 600px){
@@ -1410,6 +1492,9 @@ Single Project section
 	} 
 	.project-testimonials {
 		padding-top: 3em;
+	}
+	.new-grid {
+		padding: 1em;
 	}
 }
 
@@ -2368,7 +2453,7 @@ footer a:hover {
 	width: 400px;
 	position: absolute;
 	left: 70%;
-	margin-top: -10%;
+	margin-top: -50%;
 	/* margin-top: 20%; */
 	z-index: -20;
 	

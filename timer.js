@@ -1,32 +1,31 @@
-let countdown;
-const timerDisplay = document.querySelector('.display-time-left');
+// let countdown;
+// const timerDisplay = document.querySelector('.display-time-left');
 // console.log(timerDisplay);
 
-function timer(seconds){
-    const now = Date.now();
-    const then = now + seconds * 1000;
-    displayTimeLeft(seconds);
+// function timer(seconds){
+//     const now = Date.now();
+//     const then = now + seconds * 1000;
+//     displayTimeLeft(seconds);
 
-    countdown = setInterval(() => {
-        const secondsLeft = Math.round((then - Date.now()) / 1000);
-        // check if we should stop it
-        if(secondsLeft < 0){
-            clearInterval(countdown);
-            return;
-        }
-        displayTimeLeft(secondsLeft);
-    }, 1000)
-}
+//     countdown = setInterval(() => {
+//         const secondsLeft = Math.round((then - Date.now()) / 1000);
+//         // check if we should stop it
+//         if(secondsLeft < 0){
+//             clearInterval(countdown);
+//             return;
+//         }
+//         displayTimeLeft(secondsLeft);
+//     }, 1000)
+// }
 
-function displayTimeLeft(seconds){
-    const minutes = Math.floor(seconds / 60);
-    // const hours = Math.floor(minutes / 60);
-    // const days = Math.floor(hours / 24);
-
-    const remainderSeconds = seconds % 60;
-    const display = `${minutes} Minutes : ${remainderSeconds} Seconds`;
-    timerDisplay.textContent = display;
-}
+// function displayTimeLeft(seconds){
+//     const minutes = Math.floor(seconds / 60);
+//     // const hours = Math.floor(minutes / 60);
+//     // const days = Math.floor(hours / 24);
+//     const remainderSeconds = seconds % 60;
+//     const display = `${minutes} Minutes : ${remainderSeconds} Seconds`;
+//     timerDisplay.textContent = display;
+// }
 
 
 function openNav(){
@@ -117,6 +116,46 @@ function toggleTeamModal(e){
     // }
 }
 
+function getTimeRemaining(endtime){
+    const total = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000*60*60)) % 24);
+    const days = Math.floor(total / (1000*60*60*24));
+
+    // console.log(days);
+
+    return {
+        total,
+        days,
+        hours,
+        minutes,
+        seconds
+    }
+}
+
+function initializeClock(id, endtime) {
+    const clock = document.getElementById(id);
+    // console.log(clock);
+    
+    function updateClock(){
+        const t = getTimeRemaining(endtime);
+        clock.innerHTML = 'days: ' + t.days + '<br>' +
+                          'hours: '+ t.hours + '<br>' +
+                          'minutes: ' + t.minutes + '<br>' +
+                          'seconds: ' + t.seconds;
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+        }
+      }
+
+      updateClock(); //run once to avoid delay
+      let timeinterval = setInterval(updateClock, 1000);
+  }
+
+
 
 // console.log(timerDisplay)
-// timer(155);
+let endDate = 'August 20 2021 23:59:59 GMT+0200';
+
+initializeClock('clock', endDate);
