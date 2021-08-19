@@ -108,17 +108,17 @@ ul.grid{
 }
 
 h2 {
-	font-family: 'Gotham' !important;
+	/* font-family: 'Gotham' !important; */
 	font-weight: 800;
 }
 
 h1 {
-	font-family: 'Gotham' !important;
+	/* font-family: 'Gotham' !important; */
 	font-weight: 800;
 }
 
 h3 {
-	font-family: 'Gotham' !important;
+	/* font-family: 'Gotham' !important; */
 	font-weight: 800;
 }
 
@@ -166,6 +166,7 @@ header nav a {
 	transition: color 0.1s ease-out;
 	font-family: 'din-2014';
 	font-weight: 0;
+	font-size: 1.2em;
 }
 
 header nav a:hover {
@@ -305,6 +306,7 @@ header nav a:hover {
 
 .title-container h2 {
 	text-shadow: 0 2px 4px rgb(0 0 0 / 55%);
+	font-family: 'Gotham';
 }
 
 
@@ -404,6 +406,11 @@ header nav a:hover {
 
 .about-title-right {
 	margin-top: -10.5em;
+}
+
+.about-title-right p {
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .about-event-right {
@@ -665,18 +672,21 @@ header nav a:hover {
 
 .team-link h1 {
 	font-size: 70px;
+	font-family: 'Gotham';
 	/* text-shadow: 2px 2px black; */
 	/* top: 40%; */
 }
 
 .projects-link h1 {
 	font-size: 70px;
+	font-family: 'Gotham';
 	/* top: 45%; */
 	left: 4%;
 }
 
 .documents-link h1 {
 	font-size: 70px;
+	font-family: 'Gotham';
 	/* top: 40%; */
 }
 
@@ -961,6 +971,31 @@ margin-right: 10em;
 	/* visibility: hidden; */
 	/* opacity: 0; */
 	transition: opacity 1s;
+}
+
+.project-1-text h2, .project-1-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-2-text h2, .project-2-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-3-text h2, .project-3-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-4-text h2, .project-4-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-5-text h2, .project-5-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
 }
 
 .projects-grid .projects-row-1 .upper-right img:hover {
@@ -1369,8 +1404,14 @@ Single Project section
 	width: 50%;
 }
 
+.single-project-description h4 {
+	font-family: 'din-2014';
+}
+
 .single-project-description p {
 	padding: 0px;
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .project-additional-info-container {
@@ -1470,7 +1511,7 @@ Single Project section
 	padding-bottom: 10px;
 	font-size: 1.5em;
 	text-transform: uppercase;
-
+	font-family: 'din-2014';
 }
 
 .single-project-middle-blurb {
@@ -1480,10 +1521,21 @@ Single Project section
 	padding-left: 20em;
 }
 
+.single-project-middle-blurb p {
+	font-family: 'Gotham';
+	font-weight: 300;
+}
+
+.single-project-middle-blurb li {
+	font-family: 'Gotham';
+	font-weight: 300;
+}
+
 .single-project-middle-blurb h4 {
 	padding: 10px 20px;
 	font-size: 1.5em;
 	text-transform: uppercase;
+	font-family: 'din-2014';
 }
 
 .project-testimonials {
@@ -1657,10 +1709,15 @@ Team section
 }
 
 .team-title-text {
-	margin-left: 31em;
+	margin-left: 33em;
 	margin-top: -5em;
 	/* width: 50%; */
 	padding-right: 3em;
+}
+
+.team-title-text p {
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .team-container {
@@ -1678,6 +1735,8 @@ Team section
 
 .filter-list .links a {
 	transition: color 0.1s ease-out;
+	font-family: 'din-2014';
+	font-size: 1.1em;
 }
 
 .filter-list .links a:hover {
@@ -1738,13 +1797,13 @@ Team section
 .card .additional-info h4 {
 	text-transform: uppercase;
 	font-size: 25px;
-	font-family: 'Gotham';
+	font-family: 'din-2014';
 }
 
 .card .additional-info h5 {
 	text-transform: uppercase;
 	font-size: 20px;
-	font-family: 'Gotham';
+	font-family: 'din-2014';
 }
 
 .card h5 {
@@ -1754,8 +1813,9 @@ Team section
 .card .bio-button {
 	visibility: hidden;
 	transition: background-color 0.5s;
+	font-family: 'din-2014';
+	text-transform: uppercase;
 }
-
 
 .bio-button:hover {
 	background-color: #4FC8ED;
@@ -1892,34 +1952,27 @@ Team section
 	text-transform: uppercase;
 }
 
-.modal-left .modal-name {
-	/* margin-top: 1.5em; */
-}
-
 .modal-left .modal-title {
 	margin-bottom: 0.5em;
 	color: #4FC8ED;
+	font-family: 'din-2014';
+	font-size: 24px;
+	line-height: 1;
 }
 
 .modal-left .modal-name {
-	font-family: 'Gotham Black';
+	font-family: 'din-2014';
 	font-size: 40px;
 	line-height: 1;
 	padding-top: 0.5em;
 	padding-bottom: 0px;
 }
 
-.modal-left .modal-title {
-	/* font-family: 'Din Bold'; */
-	font-size: 24px;
-	line-height: 1;
-}
-
 .modal-right {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 2em;
+	padding-left: 4em;
 	text-transform: none;
 	align-items: flex-start;
 	width: 75%;
@@ -1929,7 +1982,9 @@ Team section
 	margin-bottom: 0px;
 	padding: 0.7em;
 	line-height: 1.5em;
-	padding-left: 0px;;
+	padding-left: 0px;
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .portfolio-button {		
@@ -1939,6 +1994,7 @@ Team section
 	/* margin-top: 1em; */
 	/* margin-bottom: 1em; */
 	transition: background-color 0.5s;
+	font-family: 'din-2014';
 }
 
 .portfolio-button:hover {
@@ -1997,6 +2053,7 @@ Team section
 	.team-title-text p {
 		padding: 0px;
 		margin-top: 2em;
+		/* font-family: 'Gotham'; */
 	} 
 	.team-section {
 		padding-left: 0px;
@@ -2030,10 +2087,6 @@ Team section
 		width: 60%;
 		padding-bottom: 1em;
 	}
-	.close {
-		position: absolute;
-		left: 75%;
-	}
 
 
   }
@@ -2051,6 +2104,7 @@ Team section
 		border: 1px solid #4FC8ED;
 		width: fit-content;
 		padding: 0.7em;
+		margin-top: 1em;
 	}
 	.overlay {
 		display: none;
@@ -2062,6 +2116,13 @@ Team section
 		flex-direction: column;
 		align-items: center;
 		/* margin */
+	}
+	.modal-right {
+		padding-left: 0;
+	}
+	.close {
+		position: absolute;
+		left: 75%;
 	}
   }
 
