@@ -905,6 +905,7 @@ margin-right: 10em;
 
 .projects-grid .project {
 	font-size: 1.5em;
+    point-events:none;
 }
 
 .projects-grid .projects-row-1 {
@@ -1875,7 +1876,6 @@ Team section
 	margin-bottom: 0.5em;
     margin-top: 0.5em;
 	color: #4FC8ED;
-    
 }
 
 .modal-left .modal-name {
