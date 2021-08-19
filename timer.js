@@ -1,33 +1,3 @@
-// let countdown;
-// const timerDisplay = document.querySelector('.display-time-left');
-// console.log(timerDisplay);
-
-// function timer(seconds){
-//     const now = Date.now();
-//     const then = now + seconds * 1000;
-//     displayTimeLeft(seconds);
-
-//     countdown = setInterval(() => {
-//         const secondsLeft = Math.round((then - Date.now()) / 1000);
-//         // check if we should stop it
-//         if(secondsLeft < 0){
-//             clearInterval(countdown);
-//             return;
-//         }
-//         displayTimeLeft(secondsLeft);
-//     }, 1000)
-// }
-
-// function displayTimeLeft(seconds){
-//     const minutes = Math.floor(seconds / 60);
-//     // const hours = Math.floor(minutes / 60);
-//     // const days = Math.floor(hours / 24);
-//     const remainderSeconds = seconds % 60;
-//     const display = `${minutes} Minutes : ${remainderSeconds} Seconds`;
-//     timerDisplay.textContent = display;
-// }
-
-
 function openNav(){
     var icon = document.querySelector('.icon');
     var navMenu = document.querySelector('.nav-menu');
@@ -45,9 +15,7 @@ function toggleDocumentView(e){
     }
     
     var newTarget = target.querySelector('.documents-icon');
-    // console.log(newTarget);
     newTarget.classList.toggle("active");
-    
 }
 
 function toggleTeamModal(e){
@@ -136,14 +104,19 @@ function getTimeRemaining(endtime){
 
 function initializeClock(id, endtime) {
     const clock = document.getElementById(id);
+    const daysSpan = clock.querySelector('.days');
+    const hoursSpan = clock.querySelector('.hours');
+    const minutesSpan = clock.querySelector('.minutes');
+    const secondsSpan = clock.querySelector('.seconds');
     // console.log(clock);
     
     function updateClock(){
         const t = getTimeRemaining(endtime);
-        clock.innerHTML = 'days: ' + t.days + '<br>' +
-                          'hours: '+ t.hours + '<br>' +
-                          'minutes: ' + t.minutes + '<br>' +
-                          'seconds: ' + t.seconds;
+        daysSpan.innerHTML = ('0' + t.days).slice(-2);
+        hoursSpan.innerHTML =  ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
         if (t.total <= 0) {
           clearInterval(timeinterval);
         }
