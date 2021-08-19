@@ -897,6 +897,8 @@ margin-right: 10em;
 	}
 }
 
+.project-2-text, 
+
 .projects-grid {
 	display: flex;
 	flex-direction: column;
@@ -914,7 +916,7 @@ margin-right: 10em;
 	justify-content: space-evenly;
 }
 
-.projects-grid .projects-row-1 .upper-left {
+.projects-grid .upper-left {
 	padding-top: 8.5em;
 	width: 30%;
 }
@@ -933,26 +935,40 @@ margin-right: 10em;
 	outline: solid 1em hotpink;
 }
 
-.projects-grid .projects-row-1 .upper-right img {
-	width: 100%;
-	outline: solid opx lightblue;
-	transition: outline 0.5s linear;
+.projects-grid .projects-row-1 .project-1-text {
+	position: absolute;
+	margin-top: 1em;
+	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
 }
 
-.projects-grid .projects-row-1 .upper-right img:hover {
-	outline: solid 1em lightblue;
+.projects-grid .projects-row-1 .upper-left img:hover .projects-grid .projects-row-1 .project-1-text {
+	opacity: 1;
+}
+
+.projects-grid .projects-row-1 .upper-right img {
+	width: 100%;
+	outline: solid 0px lightblue;
+	transition: outline 0.5s linear;
 }
 
 .projects-grid .projects-row-1 .project-2-text {
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
 }
 
-.projects-grid .projects-row-1 .project-1-text {
-	position: absolute;
-	margin-top: 1em;
-	margin-left: 1em;
+.projects-grid .projects-row-1 .upper-right img:hover {
+	outline: solid 1em lightblue;
+}
+
+.projects-grid .projects-row-1 .upper-right img:hover .projects-grid .projects-row-1 .project-2-text {
+	opacity: 1 !important;
 }
 
 .projects-grid .projects-row-1 img:hover {
@@ -986,6 +1002,9 @@ margin-right: 10em;
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
 }
 
 .projects-grid .projects-row-2 img:hover {
@@ -1003,12 +1022,10 @@ margin-right: 10em;
 .projects-grid .lower-left {
 	width: 55%;
 	padding-top: 4em;
-	/* margin-left: 3em; */
 }
 
 .projects-grid .lower-right {
 	width: 35%;
-	/* margin-left: 3em; */
 }
 
 .projects-grid .projects-row-3 img {
@@ -1038,12 +1055,18 @@ margin-right: 10em;
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden;
+	opacity: 0; */
+	transition: opacity 1s;
 }
 
 .projects-grid .projects-row-3 .project-5-text {
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
 }
 
 .projects-grid .projects-row-3 img:hover {
@@ -1148,8 +1171,6 @@ margin-right: 10em;
 	/* padding-left: 5em; */
 }
 
-
-
 .our-work .grid .bottom-left:hover {
 	outline-width: 15px;
 }
@@ -1161,11 +1182,9 @@ margin-right: 10em;
 	transition: outline 0.5s linear;
 }
 
-
 .our-work .grid .bottom-right:hover {
 outline-width: 15px;
 }
-
 
 .our-work .grid li {
 	font-weight: bolder;
@@ -1275,10 +1294,19 @@ outline-width: 15px;
 	.projects-grid .projects-row-1, .projects-grid .projects-row-2, .projects-grid .projects-row-3 {
 		flex-direction: column;
 	}
-	.upper-left, .upper-right, .projects-middle, .lower-right, .lower-left {
-		width: 100%;
+	.projects-grid .projects-row-2, .projects-grid .projects-row-3 {
+		padding-top: 0;
 	}
-	
+	.upper-left, .upper-right, .projects-middle, .projects-grid .lower-left, .lower-right {
+		width: 100% !important;
+		padding-top: 1em;
+	}
+	.projects-grid .projects-middle {
+		margin: 0px;
+	}
+	.projects-grid .upper-left {
+		padding-top: 1em;
+	}
 }
 
 @media (max-width: 700px){
@@ -2002,6 +2030,12 @@ Team section
 		width: 60%;
 		padding-bottom: 1em;
 	}
+	.close {
+		position: absolute;
+		left: 75%;
+	}
+
+
   }
 
   @media (max-width: 800px){
@@ -2064,10 +2098,10 @@ Team section
 		left: 75%;
 	}
 	.modal-connect-container {
-		align-items: center;
+		/* align-items: center; */
 	}
 	.social-container {
-		align-self: center;
+		/* align-self: center; */
 		padding: 1em;
 	}
 	.social-container a {
@@ -2075,7 +2109,7 @@ Team section
 	}
 	
 	.button-paragraph {
-		text-align: center;
+		/* text-align: center; */
 		/* padding-right: 0px; */
 		padding-right: 0px !important;
 	}
