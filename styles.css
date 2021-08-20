@@ -108,17 +108,17 @@ ul.grid{
 }
 
 h2 {
-	font-family: 'Gotham' !important;
+	/* font-family: 'Gotham' !important; */
 	font-weight: 800;
 }
 
 h1 {
-	font-family: 'Gotham' !important;
+	/* font-family: 'Gotham' !important; */
 	font-weight: 800;
 }
 
 h3 {
-	font-family: 'Gotham' !important;
+	/* font-family: 'Gotham' !important; */
 	font-weight: 800;
 }
 
@@ -166,6 +166,7 @@ header nav a {
 	transition: color 0.1s ease-out;
 	font-family: 'din-2014';
 	font-weight: 0;
+	font-size: 1.2em;
 }
 
 header nav a:hover {
@@ -300,11 +301,12 @@ header nav a:hover {
 	z-index: 10;
 	/* top: 60%; */
 	left: 90px;
-	line-height: 90px;
+	line-height: 1;
 }
 
 .title-container h2 {
 	text-shadow: 0 2px 4px rgb(0 0 0 / 55%);
+	font-family: 'Gotham';
 }
 
 
@@ -404,6 +406,11 @@ header nav a:hover {
 
 .about-title-right {
 	margin-top: -10.5em;
+}
+
+.about-title-right p {
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .about-event-right {
@@ -665,18 +672,21 @@ header nav a:hover {
 
 .team-link h1 {
 	font-size: 70px;
+	font-family: 'Gotham';
 	/* text-shadow: 2px 2px black; */
 	/* top: 40%; */
 }
 
 .projects-link h1 {
 	font-size: 70px;
+	font-family: 'Gotham';
 	/* top: 45%; */
 	left: 4%;
 }
 
 .documents-link h1 {
 	font-size: 70px;
+	font-family: 'Gotham';
 	/* top: 40%; */
 }
 
@@ -915,7 +925,7 @@ margin-right: 10em;
 	justify-content: space-evenly;
 }
 
-.projects-grid .projects-row-1 .upper-left {
+.projects-grid .upper-left {
 	padding-top: 8.5em;
 	width: 30%;
 }
@@ -931,29 +941,89 @@ margin-right: 10em;
 }
 
 .projects-grid .projects-row-1 .upper-left img:hover {
-	outline: solid 1em hotpink;
-}
-
-.projects-grid .projects-row-1 .upper-right img {
-	width: 100%;
-	outline: solid opx lightblue;
-	transition: outline 0.5s linear;
-}
-
-.projects-grid .projects-row-1 .upper-right img:hover {
-	outline: solid 1em lightblue;
-}
-
-.projects-grid .projects-row-1 .project-2-text {
-	position: absolute;
-	margin-top: 1em;
-	margin-left: 1em;
+	outline-width: 1em;
 }
 
 .projects-grid .projects-row-1 .project-1-text {
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
+}
+
+.projects-grid .projects-row-1 .upper-left img:hover .projects-grid .projects-row-1 .project-1-text {
+	opacity: 1;
+}
+
+.projects-grid .view-project-button {
+	/* visibility: hidden; */
+	transition: background-color 0.5s;
+	font-family: 'din-2014';
+	text-transform: uppercase;
+	border: 1px solid #4FC8ED;
+	width: fit-content;
+	padding: 0.5em;
+	margin-top: 0.5em;
+	font-weight: 900;
+	display: none;
+}
+
+
+.projects-grid .view-project-button:hover {
+	background-color: #4FC8ED;
+	cursor: pointer;
+	/* color: black; */
+}
+
+
+.projects-grid .projects-row-1 .upper-right img {
+	width: 100%;
+	outline: solid 0px lightblue;
+	transition: outline 0.5s linear;
+}
+
+.projects-grid .projects-row-1 .project-2-text {
+	position: absolute;
+	margin-top: 1em;
+	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
+}
+
+.project-1-text h2, .project-1-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-2-text h2, .project-2-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-3-text h2, .project-3-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-4-text h2, .project-4-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.project-5-text h2, .project-5-text h4 {
+	font-family: 'din-2014';
+	text-transform: uppercase;
+}
+
+.projects-grid .projects-row-1 .upper-right img:hover {
+	outline-width: 1em;
+}
+
+.projects-grid .projects-row-1 .upper-right img:hover .projects-grid .projects-row-1 .project-2-text {
+	opacity: 1 !important;
 }
 
 .projects-grid .projects-row-1 img:hover {
@@ -980,13 +1050,16 @@ margin-right: 10em;
 }
 
 .projects-grid .projects-row-2 img:hover {
-	outline: solid 1em gold;
+	outline-width: 1em;
 }
 
 .projects-grid .projects-row-2 .project-3-text {
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
 }
 
 .projects-grid .projects-row-2 img:hover {
@@ -1004,12 +1077,10 @@ margin-right: 10em;
 .projects-grid .lower-left {
 	width: 55%;
 	padding-top: 4em;
-	/* margin-left: 3em; */
 }
 
 .projects-grid .lower-right {
 	width: 35%;
-	/* margin-left: 3em; */
 }
 
 .projects-grid .projects-row-3 img {
@@ -1022,7 +1093,7 @@ margin-right: 10em;
 }
 
 .projects-grid .projects-row-3 .lower-left img:hover {
-	outline: solid 1em burlywood;
+	outline-width: 1em;
 }
 
 .projects-grid .projects-row-3 .lower-right img {
@@ -1031,7 +1102,7 @@ margin-right: 10em;
 }
 
 .projects-grid .projects-row-3 .lower-right img:hover {
-	outline: solid 1em lightseagreen;
+	outline-width:  1em;
 	
 }
 
@@ -1039,12 +1110,18 @@ margin-right: 10em;
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden;
+	opacity: 0; */
+	transition: opacity 1s;
 }
 
 .projects-grid .projects-row-3 .project-5-text {
 	position: absolute;
 	margin-top: 1em;
 	margin-left: 1em;
+	/* visibility: hidden; */
+	/* opacity: 0; */
+	transition: opacity 1s;
 }
 
 .projects-grid .projects-row-3 img:hover {
@@ -1059,6 +1136,7 @@ margin-right: 10em;
 
 .projects-title {
 	width: 100%;
+	font-family: 'Gotham';
 	/* min-width: 65%; */
 }
 
@@ -1149,8 +1227,6 @@ margin-right: 10em;
 	/* padding-left: 5em; */
 }
 
-
-
 .our-work .grid .bottom-left:hover {
 	outline-width: 15px;
 }
@@ -1162,11 +1238,9 @@ margin-right: 10em;
 	transition: outline 0.5s linear;
 }
 
-
 .our-work .grid .bottom-right:hover {
 outline-width: 15px;
 }
-
 
 .our-work .grid li {
 	font-weight: bolder;
@@ -1276,10 +1350,41 @@ outline-width: 15px;
 	.projects-grid .projects-row-1, .projects-grid .projects-row-2, .projects-grid .projects-row-3 {
 		flex-direction: column;
 	}
-	.upper-left, .upper-right, .projects-middle, .lower-right, .lower-left {
-		width: 100%;
+	.projects-grid .projects-row-2, .projects-grid .projects-row-3 {
+		padding-top: 0;
 	}
-	
+	.upper-left, .upper-right, .projects-middle, .projects-grid .lower-left, .lower-right {
+		width: 100% !important;
+		padding-top: 5em;
+	}
+	.projects-grid .projects-middle {
+		margin: 0px;
+	}
+	.projects-grid .upper-left {
+		padding-top: 1em;
+	}
+	.projects-grid .upper-left, .projects-grid .upper-right, .projects-grid .middle, .projects-grid .lower-left, .projects-grid .lower-right {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.projects-grid .projects-row-1 .project-1-text, .projects-grid .projects-row-1 .project-2-text, .projects-grid .projects-row-2 .project-3-text, .projects-grid .projects-row-3 .project-4-text, .projects-grid .projects-row-3 .project-5-text {
+		position: relative;
+		margin-left: 0px;
+		margin-top: 0.5em;
+	}
+	.projects-grid .view-project-button {
+		display: block;
+	}
+
+	.project-1-name, .project-2-name, .project-3-name, .project-4-name, .project-5-name {
+		font-size: 60px;
+	}
+	.project-1-type, .project-2-type, .project-3-type, .project-4-type, .project-5-type {
+		font-size: 40px;
+	}
+	.projects-grid .projects-row-1 .upper-right img, .projects-grid .projects-row-1 .upper-left img, .projects-grid .projects-row-1 .upper-right img, .projects-grid .projects-row-1 .upper-right img, .projects-grid .projects-row-1 .upper-right img {
+		outline-width: 0;
+	}
 }
 
 @media (max-width: 700px){
@@ -1342,8 +1447,14 @@ Single Project section
 	width: 50%;
 }
 
+.single-project-description h4 {
+	font-family: 'din-2014';
+}
+
 .single-project-description p {
 	padding: 0px;
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .project-additional-info-container {
@@ -1443,7 +1554,7 @@ Single Project section
 	padding-bottom: 10px;
 	font-size: 1.5em;
 	text-transform: uppercase;
-
+	font-family: 'din-2014';
 }
 
 .single-project-middle-blurb {
@@ -1453,10 +1564,21 @@ Single Project section
 	padding-left: 20em;
 }
 
+.single-project-middle-blurb p {
+	font-family: 'Gotham';
+	font-weight: 300;
+}
+
+.single-project-middle-blurb li {
+	font-family: 'Gotham';
+	font-weight: 300;
+}
+
 .single-project-middle-blurb h4 {
 	padding: 10px 20px;
 	font-size: 1.5em;
 	text-transform: uppercase;
+	font-family: 'din-2014';
 }
 
 .project-testimonials {
@@ -1627,13 +1749,19 @@ Team section
 
 .team-title {
 	line-height: 1;
+	font-family: 'Gotham';
 }
 
 .team-title-text {
 	margin-left: 31em;
-	margin-top: -5em;
+	margin-top: -5.2em;
 	/* width: 50%; */
 	padding-right: 3em;
+}
+
+.team-title-text p {
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .team-container {
@@ -1651,6 +1779,8 @@ Team section
 
 .filter-list .links a {
 	transition: color 0.1s ease-out;
+	font-family: 'din-2014';
+	font-size: 1.1em;
 }
 
 .filter-list .links a:hover {
@@ -1711,13 +1841,13 @@ Team section
 .card .additional-info h4 {
 	text-transform: uppercase;
 	font-size: 25px;
-	font-family: 'Gotham';
+	font-family: 'din-2014';
 }
 
 .card .additional-info h5 {
 	text-transform: uppercase;
 	font-size: 20px;
-	font-family: 'Gotham';
+	font-family: 'din-2014';
 }
 
 .card h5 {
@@ -1727,8 +1857,9 @@ Team section
 .card .bio-button {
 	visibility: hidden;
 	transition: background-color 0.5s;
+	font-family: 'din-2014';
+	text-transform: uppercase;
 }
-
 
 .bio-button:hover {
 	background-color: #4FC8ED;
@@ -1865,10 +1996,6 @@ Team section
 	text-transform: uppercase;
 }
 
-.modal-left .modal-name {
-	/* margin-top: 1.5em; */
-}
-
 .modal-left .modal-title {
     text-transform: uppercase;
     font-family: 'Gotham';
@@ -1876,27 +2003,24 @@ Team section
 	margin-bottom: 0.5em;
     margin-top: 0.5em;
 	color: #4FC8ED;
+	font-family: 'din-2014';
+	font-size: 24px;
+	line-height: 1;
 }
 
 .modal-left .modal-name {
-	font-family: 'Gotham Black';
+	font-family: 'din-2014';
 	font-size: 40px;
 	line-height: 1;
 	padding-top: 0.5em;
 	padding-bottom: 0px;
 }
 
-.modal-left .modal-title {
-	/* font-family: 'Din Bold'; */
-	font-size: 24px;
-	line-height: 1;
-}
-
 .modal-right {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 2em;
+	padding-left: 4em;
 	text-transform: none;
 	align-items: flex-start;
 	width: 75%;
@@ -1906,7 +2030,9 @@ Team section
 	margin-bottom: 0px;
 	padding: 0.7em;
 	line-height: 1.5em;
-	padding-left: 0px;;
+	padding-left: 0px;
+	font-family: 'Gotham';
+	font-weight: 300;
 }
 
 .portfolio-button {		
@@ -1916,6 +2042,7 @@ Team section
 	/* margin-top: 1em; */
 	/* margin-bottom: 1em; */
 	transition: background-color 0.5s;
+	font-family: 'din-2014';
 }
 
 .portfolio-button:hover {
@@ -1974,6 +2101,7 @@ Team section
 	.team-title-text p {
 		padding: 0px;
 		margin-top: 2em;
+		/* font-family: 'Gotham'; */
 	} 
 	.team-section {
 		padding-left: 0px;
@@ -2007,6 +2135,8 @@ Team section
 		width: 60%;
 		padding-bottom: 1em;
 	}
+
+
   }
 
   @media (max-width: 800px){
@@ -2022,6 +2152,7 @@ Team section
 		border: 1px solid #4FC8ED;
 		width: fit-content;
 		padding: 0.7em;
+		margin-top: 1em;
 	}
 	.overlay {
 		display: none;
@@ -2033,6 +2164,13 @@ Team section
 		flex-direction: column;
 		align-items: center;
 		/* margin */
+	}
+	.modal-right {
+		padding-left: 0;
+	}
+	.close {
+		position: absolute;
+		left: 75%;
 	}
   }
 
@@ -2069,10 +2207,10 @@ Team section
 		left: 75%;
 	}
 	.modal-connect-container {
-		align-items: center;
+		/* align-items: center; */
 	}
 	.social-container {
-		align-self: center;
+		/* align-self: center; */
 		padding: 1em;
 	}
 	.social-container a {
@@ -2080,7 +2218,7 @@ Team section
 	}
 	
 	.button-paragraph {
-		text-align: center;
+		/* text-align: center; */
 		/* padding-right: 0px; */
 		padding-right: 0px !important;
 	}
@@ -2577,6 +2715,41 @@ footer a:hover {
 
 	background-image: radial-gradient(circle at 1px 1px, white 4px, transparent 0);
 	background-size: 40px 40px;
+}
+
+
+
+.clockContainer {
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.clockContainer h1 {
+	text-transform: uppercase;
+	font-family: 'din-2014';
+}
+
+#clock {
+	display: flex;
+	width: 70%;
+	justify-content: space-evenly;
+	padding: 1em;
+}
+
+.counter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* background-color: lightsteelblue; */
+	padding: 5px;
+	width: 6em;
+	font-family: 'din-2014'
+}
+
+.counter div {
+	text-transform: uppercase;
 }
   
 
